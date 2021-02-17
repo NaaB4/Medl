@@ -1,0 +1,1 @@
+<?php wp_editor(($data['value'] ? $data['value'] : ''), $data['key']); ?>

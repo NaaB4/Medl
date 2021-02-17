@@ -1,0 +1,9 @@
+.edc_admin_page.orders_page .items .item .details{ flex-flow: row wrap; }
+.edc_admin_page.orders_page .items .item .details button{ margin-bottom: 15px; }
+.edc_admin_page.orders_page .group_holder{ padding: 0 15px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px; }
+.edc_admin_page.orders_page .group_holder .group_title{ font-weight: bold; padding: 15px 0; font-size: 18px;  }
+.edc_admin_page.orders_page .group_holder ul{ margin: 0; padding: 0; list-style: none; display: flex; flex-flow: row wrap; }
+.edc_admin_page.orders_page .group_holder ul li{ width: 50%; padding: 0 8px; margin-bottom: 10px; display: flex; }
+.edc_admin_page.orders_page .group_holder ul li span.name{ padding-right: 6px; font-size: 14px; font-weight: bold; }
+.edc_admin_page.orders_page .group_holder ul li span.value{ padding-left: 6px; font-size: 16px; }
+

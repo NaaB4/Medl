@@ -1,0 +1,1 @@
+<label class="edc_checkbox edc_field_<?=$data['key']?>"><input type="checkbox" value="1" name="<?=$data['key']?>" <?=(EDCH::is($data['value']) ? 'checked="checked"' : '')?>> <?=$data['label']?></label>

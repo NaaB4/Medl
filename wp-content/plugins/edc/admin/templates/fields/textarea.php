@@ -1,0 +1,1 @@
+<textarea class="edc_textarea edc_field_<?=$data['key']?>" name="<?=$data['key']?>" <?=($data['placeholder'] ? 'placeholder="'.$data['placeholder'].'"' : '')?> <?=($data['required'] ? 'data-required="1"' : '')?>><?=($data['value'] ? $data['value'] : '')?></textarea>

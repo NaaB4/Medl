@@ -1,0 +1,1 @@
+<input class="edc_text edc_field_<?=$data['key']?>" type="text" name="<?=$data['key']?>" <?=($data['placeholder'] ? 'placeholder="'.$data['placeholder'].'"' : '')?> value="<?=($data['value'] ? esc_attr($data['value']) : '')?>" <?=($data['required'] ? 'data-required="1"' : '')?>>

@@ -1,0 +1,307 @@
+.rechner-links{ display: block; position: static; right: unset; top: unset; max-width: 550px; margin: 20px auto; }
+
+body .edc .container{ max-width: 1280px; margin: 0 auto; }
+.edc_fixed_data{ border: 1px solid #50af31; border-radius: 0; box-shadow: 0 0 3px rgba(80,175,49,0.5); }
+
+body .edc .edc_list > .items{ justify-content: center; }
+body .edc .close_btn{ font-size: 14px; }
+
+body .edc .edc_tabs ul.navigation li a{ height: unset; border: 0; color: #fff; cursor: pointer; text-transform: unset; }
+body .edc .edc_tabs ul.navigation li.active a{ height: unset; border: 0; padding: 15px 0; }
+body .edc .edc_tabs ul.navigation li.active a::after{ display: none; }
+body .edc .edc_tabs ul.navigation li.strom-link a{ background: #50af31; }
+body .edc .edc_tabs ul.navigation li.strom-link a:hover{ background: #45942b; }
+body .edc .edc_tabs ul.navigation li.erdgas-link a{ background: #ff6600; }
+body .edc .edc_tabs ul.navigation li.erdgas-link a:hover{ background: #e25c02; }
+body .edc .edc_tabs ul.navigation li.kombi-link a{ background: #ba1172; }
+body .edc .edc_tabs ul.navigation li.kombi-link a:hover{ background: #96105d; }
+body .edc .edc_tabs .items{ border: 0; padding: 0; }
+body .edc .edc_tabs .items .edc_tab{ padding: 18px 8px; border: 1px solid #50af31; border-top: 0; }
+body .edc .edc_tabs.theme_gas .items .edc_tab{ border-color: #ff6600; }
+body .edc .edc_tabs.theme_combi .items .edc_tab{ border-color: #ba1172; }
+
+
+body .edc .edc_tabs .edc_checkbox{ padding-left: 38px; font-size: 20px; }
+body .edc .edc_tabs .edc_checkbox::before{ width: 25px; height: 25px; top: 3px; }
+
+body .edc .edc_form_row{ padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid #50af31; }
+body .edc .edc_form_row:last-child{ border-bottom: 0; }
+body .edc .edc_form_row .edc_persons{ display: flex; align-items: center; font-weight: bold; font-size: 28px; justify-content: center; text-align: center; flex-flow: row wrap; }
+body .edc .edc_form_row .edc_persons input[type="radio"]{ display: none; }
+body .edc .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ color: #50af31; font-size: 60px; }
+body .edc .edc_form_row .edc_persons label{ cursor: pointer; margin-right: 30px; }
+body .edc .edc_form_row .edc_persons label:last-of-type{ margin-right: 0; }
+body .edc .edc_form_row .edc_persons .text{ width: 100%; }
+body .edc .edc_form_row.location{ display: none; }
+body .edc .edc_form_row.location.active{ display: block; }
+body .edc .theme_gas .edc_form_row .edc_persons{ font-size: 20px; }
+body .edc .theme_gas .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ font-size: 40px; }
+
+body .edc .theme_combi .edc_form_row.annual_holder{ display: flex; }
+body .edc .theme_combi .edc_form_row.annual_holder > div{ width: 50%; }
+body .edc .theme_combi .edc_form_row.annual_holder > div:first-child{ border-right: 1px solid #ba1172; }
+body .edc .theme_combi .edc_form_row .edc_persons label{ margin-right: 15px; }
+body .edc .theme_combi .edc_form_row .edc_persons label:last-of-type{ margin-right: 0; }
+body .edc .theme_combi .edc_form_row.annual_holder > div{ padding: 0 10px; }
+body .edc .theme_combi .edc_form_row .edc_persons{ font-size: 18px; }
+body .edc .theme_combi .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ font-size: 36px; }
+body .edc .theme_combi .annual_consumption input[type="text"]{ font-size: 36px; }
+
+body .edc .annual_consumption{ display: flex; align-items: center; justify-content: center; text-align: center; flex-flow: row wrap; }
+body .edc .annual_consumption .minus{ font-size: 50px; padding: 0 20px; font-weight: bold; cursor: pointer; }
+body .edc .annual_consumption .plus{ font-size: 50px; padding: 0 20px; font-weight: bold; cursor: pointer; }
+body .edc .annual_consumption input[type="text"]{ -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0; padding: 0; outline: 0 !important; font-size: 45px; color: #50af31; font-weight: bold; width: 180px; max-width: 100%; text-align: center; }
+
+
+body .edc .edc_form_row.postal_code input[type="text"]{ -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0; padding: 0; outline: 0 !important; font-size: 45px; color: #50af31; font-weight: bold; width: 100%; text-align: center; }
+body .edc .edc_form_row.postal_code input[type="text"]::placeholder{ color: #50af31; }
+body .edc .edc_form_row.postal_code input[type="text"]::-moz-placeholder{ color: #50af31; }
+body .edc .edc_form_row.postal_code input[type="text"]::-webkit-input-placeholder{ color: #50af31; }
+body .edc .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #50af31; }
+body .edc .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #50af31; }
+
+body .edc .edc_checkbox{ display: inline-block; margin-right: 15px; position: relative; cursor: pointer; padding-left: 25px; }
+body .edc .edc_checkbox::before{ content: ""; display: block; position: absolute; left: 0; top: 0; background: #fff; border: 1px solid #2092d0; border-radius: 3px; width: 16px; height: 16px; }
+body .edc .edc_checkbox.active::before,body .edc input:checked+label::before,body .edc input:checked+.field label::before{ background: #fff url("../images/checkbox.svg") 50% 50% no-repeat; background-size: 14px 14px; }
+body .edc .edc_checkbox.active::before{ background: #fff url("../images/checkbox.svg") 50% 50% no-repeat; background-size: 14px 14px; }
+body .edc .edc_checkbox:last-of-type{ margin-right: 0; }
+body .edc .edc_form_row select{ height: 50px; width: 100%; border: 1px solid #50af31; }
+body .edc .edc_form_row.checkbox{ text-align: center; }
+body .edc .edc_checkbox{ font-size: 14px; }
+body .edc .edc_checkbox::before{ border-color: #50af31; }
+body .edc.theme_combi .edc_checkbox::before{ border-color: rgba(186,17,114,1); }
+body .edc.theme_gas .edc_checkbox::before{ border-color: #ff6600; }
+body .edc.theme_combi .edc_checkbox.active::before, body .edc.theme_combi input:checked+label::before, body .edc.theme_combi input:checked+.field label::before{ background-image: url("../images/checkbox_combi.svg"); }
+body .edc.theme_gas .edc_checkbox.active::before, body .edc.theme_gas input:checked+label::before, body .edc.theme_gas input:checked+.field label::before{ background-image: url("../images/checkbox_gas.svg"); }
+body .edc .edc_checkbox.active::before, body .edc input:checked+label::before, body .edc input:checked+.field label::before{ background-image: url("../images/checkbox.svg"); }
+body .edc .edc_tab .submit_group{ text-align: center; }
+body .edc .btn{ padding: 0 40px; color: #fff; border-color: transparent; border-radius: 8px; font-size: 20px; font-family: 'Anton-Regular', Helvetica, Arial, Lucida, sans-serif; background-color: transparent; background-repeat: repeat; background-image: linear-gradient(to right, #50af31, #90CD1C); -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; transition: all .2s ease-in-out; background-size: 300% 100%; white-space: nowrap; display: inline-flex; justify-content: center; font-weight: normal; text-transform: unset; background-position: 50% 50%; }
+body .edc .theme_gas .edc_form_row{ border-color: #ff6600; }
+body .edc .theme_gas .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ color: #ff6600; }
+body .edc .theme_gas .annual_consumption input[type="text"]{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]::placeholder{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]::-moz-placeholder{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]::-webkit-input-placeholder{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #ff6600; }
+body .edc .theme_gas .edc_form_row select{ border-color: #ff6600; }
+body .edc .theme_gas .edc_checkbox::before{ border-color: #ff6600; }
+body .edc .theme_gas .btn,body .edc.theme_gas .btn{ background: #ff6600; }
+body .edc .theme_gas .btn:hover,body .edc.theme_gas .btn:hover{ background: #e25c02; }
+body .edc .theme_gas .edc_checkbox.active::before, body .edc .theme_gas input:checked+label::before, body .edc .theme_gas input:checked+.field label::before{ background-image: url("../images/checkbox_gas.svg"); }
+body .edc .theme_gas .close_btn{ color: #ff6600; }
+
+body .edc .theme_combi .edc_form_row{ border-color: #ba1172; }
+/*}*/
+body .edc .btn.fsmall{ font-family: 'IBMPlexSerif-Regular',Helvetica,Arial,Lucida,sans-serif; font-size: 14px; }
+body .edc .btn:hover{ background-position: 99% 0; background-color: transparent; background-image: linear-gradient(to right, #50af31, #90CD1C); -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; transition: all .2s ease-in-out; background-size: 300% 100%; }
+
+body .edc .theme_combi .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ color: #ba1172; }
+body .edc .theme_combi .annual_consumption input[type="text"]{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]::placeholder{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]::-moz-placeholder{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]::-webkit-input-placeholder{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row.postal_code input[type="text"]::-ms-input-placeholder{ color: #ba1172; }
+body .edc .theme_combi .edc_form_row select{ border-color: #ba1172; }
+body .edc .theme_combi .edc_checkbox::before{ border-color: #ba1172; }
+body .edc .theme_combi .btn,body .edc.theme_combi .btn{ background: #ba1172; }
+body .edc .theme_combi .btn:hover,body .edc.theme_combi .btn:hover{ background: #96105d; }
+body .edc .theme_combi .edc_checkbox.active::before, body .edc .theme_combi input:checked+label::before, body .edc .theme_combi input:checked+.field label::before{ background-image: url("../images/checkbox_combi.svg"); }
+body .edc .theme_combi .close_btn{ color: #ba1172; }
+
+@media (max-width:550px){
+	body .edc .edc_tabs ul.navigation{ flex-direction: column; width: 100%; }
+	body .edc .edc_tabs ul.navigation li{ width: 100%; }
+	body .edc .annual_consumption .minus,body .edc .annual_consumption .plus{ display: none; }
+	body .edc .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ font-size: 40px; }
+	body .edc .annual_consumption input[type="text"]{ font-size: 40px; }
+	body .edc .edc_form_row .edc_persons{ font-size: 20px; }
+	body .edc .theme_combi .edc_form_row .edc_persons{ font-size: 14px; }
+	body .edc .theme_combi .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ font-size: 26px; }
+	body .edc .theme_combi .annual_consumption input[type="text"]{ font-size: 20px; }
+}
+
+body .edc .edc_popup.tariffs_popup .edc_popup_wrapper{ padding-top: 0; }
+/*body .edc .edc_popup.tariffs_popup .edc_close{ color: #f00; }*/
+body .edc .edc_popup.tariffs_popup .edc_popup_wrapper .edc_popup_content{ border-top: 0; padding: 0; }
+body .edc .tariffs_popup .edc_tabs  ul.navigation li{ display: none; width: 100%; }
+body .edc .tariffs_popup .edc_tabs  ul.navigation li a{ width: 100%; align-items: center; justify-content: center; flex-direction: column; padding: 15px 0; }
+body .edc .tariffs_popup.theme_electricity .edc_tabs  ul.navigation li[data-class="theme_electricity"]{ display: flex; }
+body .edc .tariffs_popup.theme_gas .edc_tabs  ul.navigation li[data-class="theme_gas"]{ display: flex; }
+body .edc .tariffs_popup.theme_combi .edc_tabs  ul.navigation li[data-class="theme_combi"]{ display: flex; }
+body .edc .tariffs_popup.theme_electricity .edc_tab:nth-child(1){ display: block; }
+body .edc .tariffs_popup.theme_gas .edc_tab:nth-child(2){ display: block; }
+body .edc .tariffs_popup.theme_combi .edc_tab:nth-child(3){ display: block; }
+body .edc .tariffs_popup .ac_type{ display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 22px; }
+body .edc .tariffs_popup .edc_form_row.location{ border: 0; }
+body .edc .single_tariff{ border: 0; padding: 0; padding-bottom: 36px; border-radius: 0 0 20px 20px; box-shadow: 0 15px 40px 0 rgba(120,112,90,0.4); }
+body .edc .single_tariff .title{ padding: 24px 10px; background: #ff6600;; color: #fff; margin-bottom: 0; font-size: 24px; font-weight: bold;}
+body .edc .single_tariff .subtitle{ padding: 24px 10px; background: rgba(255,102,0,0.44); color: #000; font-size: 20px; font-weight: bold; margin-bottom: 0; text-align: center; }
+body .edc .single_tariff.theme_electricity .subtitle{ background: rgba(80,175,49,0.44); }
+body .edc .single_tariff.theme_electricity .title{ background: rgba(80,175,49,1); }
+body .edc .single_tariff.theme_combi .subtitle{ background: rgba(186,17,114,0.44); }
+body .edc .single_tariff.theme_combi .title{ background: rgba(186,17,114,1); }
+body .edc .single_tariff .tariff_characteristics{ margin-top: 0; margin-bottom: 30px; }
+body .edc .single_tariff .tariff_characteristics .items{ padding: 0; background: rgba(219,217,207,0.44); padding: 20px 48px; }
+body .edc .single_tariff .tariff_characteristics .items li{ background: unset; padding: 0 0 0 35px; position: relative; font-size: 15px; line-height: 22px; margin-bottom: 13px; }
+body .edc .single_tariff .tariff_characteristics .items li:last-child{ margin-bottom: 0; }
+body .edc .single_tariff .tariff_characteristics .items li::before{ content: ""; display: block; position: absolute; left: 0; top: 0; width: 22px; height: 22px; background: url("images/check-mark.png") 50% 50% no-repeat; background-size: cover; }
+body .edc .single_tariff .tariff_characteristics .items li:nth-child(odd){ background: unset; }
+body .edc .single_tariff .tariff_consumption{ color: #50af31; text-align: center; padding: 0 10px; font-weight: bold; font-size: 24px; margin-bottom: 26px; }
+body .edc .single_tariff .heading{ margin-bottom: 10px; font-weight: normal; color: #4d4b45; font-size: 22px; }
+body .edc .single_tariff .tariff_consumption > span{ display: inline-block; padding: 0 6px 6px 6px; border-bottom: 1px solid #50af31; }
+body .edc .single_tariff .prices{ font-size: 15px; padding: 0 60px; text-align: center; }
+body .edc .single_tariff .prices ul{ list-style: none; padding: 0; }
+body .edc .single_tariff .prices ul li{ list-style: none; margin-bottom: 5px; }
+body .edc .single_tariff .prices ul li:last-child{ margin-bottom: 0; }
+body .edc .single_tariff .prices ul li .edc_price{ display: block; margin-top: 5px; }
+body .edc .single_tariff .total_price{ margin: 38px 0 20px 0; padding: 0 10px; font-size: 26px; font-weight: bold; color: #4d4b45; font-family: 'Anton-Regular', Helvetica, Arial, Lucida, sans-serif; }
+body .edc .single_tariff .total_price .edc_price{ font-size: 40px; color: #50af31; }
+body .edc .single_tariff .links_group{ text-align: center; padding: 0 10px; margin-top: 16px; font-size: 15px; color: #616057; }
+body .edc .single_tariff .links_group a{ display: inline-block; text-decoration: none; color: inherit; margin: 0 2px; }
+body .edc .single_tariff input[type="radio"]{ display: none; }
+body .edc .single_tariff .goodies_list{ padding: 0 48px; margin-top: 16px; }
+body .edc .single_tariff .goodies_list .checkbox{ margin-bottom: 8px; }
+body .edc .single_tariff .goodies_list .checkbox:last-child{ margin-bottom: 0; }
+body .edc .single_tariff .btn{ width: 260px; max-width: 100%; }
+body .edc .single_tariff .price_details{ color: rgba(80,175,49,1); position: relative; text-align: center; padding: 0 8px; margin-top: 6px; }
+body .edc .single_tariff .price_details span{ position: relative; }
+body .edc .single_tariff .price_details .hover_info{ position: absolute; display: none; padding: 8px; left: 100%; top: 50%; transform: translate(10px,-50%); border: 1px solid rgba(80,175,49,1); background: #fff; width: 280px; font-size: 13px; z-index: 2; }
+body .edc .single_tariff .price_details .hover_info::before{ content: ""; display: block; position: absolute; left: -8px; border-right: 9px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; height: 0; width: 0; z-index: 3; top: 50%; margin-top: -7px; }
+body .edc .single_tariff .price_details .hover_info::after{ content: ""; display: block; position: absolute; left: -9px; border-right: 9px solid rgba(80,175,49,1); border-top: 8px solid transparent; border-bottom: 8px solid transparent; height: 0; width: 0; z-index: 2; top: 50%; margin-top: -8px; }
+body .edc .single_tariff .price_details span:hover .hover_info{ display: block; }
+body .edc .single_tariff .tariff_row{ text-align: center; padding: 0 10px; margin-bottom: 10px; }
+body .edc .single_tariff .combi_prices_holder{ display: none; }
+body .edc .single_tariff .combi_prices_holder.active{ display: block; }
+
+@media (max-width:500px){
+	body .edc .single_tariff .price_details .hover_info{ left: 50%; top: 100%; transform: translate(-50%,10px); }
+	body .edc .single_tariff .price_details .hover_info::before{ border-right: 7px solid transparent; border-left: 7px solid transparent; border-bottom: 9px solid #fff; border-top: unset; top: -8px; left: 50%; margin-left: -7px; margin-top: 0; }
+	body .edc .single_tariff .price_details .hover_info::after{ border-right: 8px solid transparent; border-left: 8px solid transparent; border-bottom: 9px solid rgba(80,175,49,1); border-top: unset; top: -9px; left: 50%; margin-left: -8px; margin-top: 0; }
+}
+
+body .edc .container{ padding-top: 1px !important; }
+body .edc .order_form{ border-color: rgba(80,175,49,1); margin-top: 0; }
+body .edc form .fieldset input[type="text"]:not(.chosen-search-input), .edc form .fieldset input[type="email"], .edc form .fieldset input[type="num"], .edc form .fieldset select, .edc form .fieldset textarea{ border-color: rgba(80,175,49,1); }
+body .edc.theme_combi .order_form{ border-color: rgba(186,17,114,1); margin-top: 0; }
+body .edc.theme_combi form .fieldset input[type="text"]:not(.chosen-search-input), .edc.theme_combi form .fieldset input[type="email"], .edc.theme_combi form .fieldset input[type="num"], .edc.theme_combi form .fieldset select, .edc.theme_combi form .fieldset textarea{ border-color: rgba(186,17,114,1); }
+body .edc.theme_gas .order_form{ border-color: #ff6600; margin-top: 0; }
+body .edc.theme_gas form .fieldset input[type="text"]:not(.chosen-search-input), .edc.theme_gas form .fieldset input[type="email"], .edc.theme_gas form .fieldset input[type="num"], .edc.theme_gas form .fieldset select, .edc.theme_gas form .fieldset textarea{ border-color: #ff6600; }
+
+body .edc .edc_radio label{ display: block; }
+body .edc .edc_radio label::before,body .edc  .edc_radio label::before{ top: 4px; }
+body .edc .theme_electricity .edc_radio label::before,body .edc.theme_electricity  .edc_radio label::before{ border-color: rgba(80,175,49,1); }
+body .edc .edc_radio input:checked+label::after{ top: 8px; background-color: rgba(80,175,49,1); content: ''; position: absolute; left: 4px; width: 14px; height: 14px; border-radius: 50px; border: none; }
+body .edc.theme_combi .edc_radio label::before,body .edc.theme_combi  .edc_radio label::before{ border-color: rgba(186,17,114,1); }
+body .edc.theme_combi .edc_radio input:checked+label::after{ background-color: rgba(186,17,114,1); }
+body .edc.theme_gas .edc_radio label::before,body .edc.theme_gas  .edc_radio label::before{ border-color: #ff6600; }
+body .edc.theme_gas .edc_radio input:checked+label::after{ background-color: #ff6600; }
+body .edc form .fieldset.near{ justify-content: flex-start; }
+body .edc form .fieldset.inline{ justify-content: flex-start; text-align: left; }
+body .edc form .fieldset.inline > div{ width: unset; margin-right: 40px; }
+body .edc form .fieldset.inline > div:last-child{ margin-right: 0; }
+
+
+body .edc .edc_tabs.landing:not(.full) ul.navigation li{ display: none; width: 100%; }
+body .edc .edc_tabs.landing:not(.full) ul.navigation li a{ width: 100%; align-items: center; justify-content: center; flex-direction: column; padding: 15px 0; }
+body .edc .edc_tabs.landing.theme_electricity:not(.full) ul.navigation li[data-class="theme_electricity"]{ display: flex; }
+body .edc .edc_tabs.landing.theme_gas:not(.full) ul.navigation li[data-class="theme_gas"]{ display: flex; }
+body .edc .edc_tabs.landing.theme_combi:not(.full) ul.navigation li[data-class="theme_combi"]{ display: flex; }
+
+#heimkehrer,#swbLandingTariff,#manducareLandingTariff,#firmenvorteilLandingTariff{ margin-top: -300px; padding-top: 250px; }
+#medlAutostromPlus{ margin-top: -210px; padding-top: 180px; }
+
+body .edc .edc_checkbox .fieldset{ margin: 10px 0; }
+
+body .edc_popup .form_row{ margin-bottom: 15px; }
+body .edc_popup .field input[type="text"]{ width: 100%; }
+body .edc_popup .field{ position: relative; transition: padding ease-in 0.3s; }
+body .edc_popup .field .required_text{ display: none; position: absolute; top: 0; right: 0; padding: 3px 7px; font-size: 12px; color: #fff; background: #a00; max-width: 100%; overflow: hidden; white-space: nowrap; transition: height ease-in 0.3s; height: 0; align-items: center; }
+/*.edc form .col_2.required .label .field,.edc form .label .field.required{ padding-top: 25px; }*/
+body .edc_popup .field.required .required_text{ display: flex; height: 30px; }
+body .edc_popup .field.required.to_bottom{ padding-bottom: 30px; }
+body .edc_popup .field.required.to_bottom .required_text{ top: auto; bottom: 0; }
+body .edc_popup .field.required.to_top{ padding-top: 27px; }
+body .edc_popup .field.required.to_top .required_text{ top: 0; left: 0; right: auto; }
+body .edc .edc_popup .edc_radio label{ padding-left: 30px; margin-right: 15px; }
+body .edc .edc_popup .edc_radio label:last-child{ margin-right: 0; }
+.edc .edc_popup .edc_radio label:before{ border-color: rgba(80,175,49,1); }
+
+body .edc .edc_hint{ position: relative; display: inline-flex; width: 20px; height: 20px; vertical-align: middle; border-radius: 50%; background: rgba(80,175,49,1); color: #fff; font-weight: bold; align-items: center; justify-content: center; font-size: 12px; }
+body .edc .edc_hint::before{ content: "i"; }
+body .edc .edc_hint .text{ position: absolute; display: none; padding: 8px; left: 100%; top: 50%; transform: translate(10px,-50%); border: 1px solid rgba(80,175,49,1); background: #fff; width: 250px; color: #000; font-size: 12px; z-index: 9; }
+body .edc .edc_hint .text::before{ content: ""; display: block; position: absolute; left: -8px; border-right: 9px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; height: 0; width: 0; z-index: 3; top: 50%; margin-top: -7px; }
+body .edc .edc_hint .text::after{ content: ""; display: block; position: absolute; left: -9px; border-right: 9px solid rgba(80,175,49,1); border-top: 8px solid transparent; border-bottom: 8px solid transparent; height: 0; width: 0; z-index: 2; top: 50%; margin-top: -8px; }
+body .edc .edc_hint:hover .text{ display: block; }
+
+body .edc .theme_combi .edc_hint,body .edc.theme_combi .edc_hint{ background: rgba(186,17,114,1); }
+body .edc .theme_combi .edc_hint .text,body .edc.theme_combi .edc_hint .text{ border-color: rgba(186,17,114,1); }
+body .edc .theme_combi .edc_hint .text::after,body .edc.theme_combi .edc_hint .text::after{ border-right-color: rgba(186,17,114,1); }
+
+body .edc .theme_gas .edc_hint,body .edc.theme_gas .edc_hint{ background: #ff6600; }
+body .edc .theme_gas .edc_hint .text,body .edc.theme_gas .edc_hint .text{ border-color: #ff6600; }
+body .edc .theme_gas .edc_hint .text::after,body .edc.theme_gas .edc_hint .text::after{ border-right-color: #ff6600; }
+
+@media (max-width:500px){
+	body .edc .single_tariff .price_details .hover_info{ left: 50%; top: 100%; transform: translate(-50%,10px); }
+	body .edc .single_tariff .price_details .hover_info::before{ border-right: 7px solid transparent; border-left: 7px solid transparent; border-bottom: 9px solid #fff; border-top: unset; top: -8px; left: 50%; margin-left: -7px; margin-top: 0; }
+	body .edc .single_tariff .price_details .hover_info::after{ border-right: 8px solid transparent; border-left: 8px solid transparent; border-bottom: 9px solid rgba(80,175,49,1); border-top: unset; top: -9px; left: 50%; margin-left: -8px; margin-top: 0; }
+}
+
+.ui-widget.ui-widget-content{ z-index: 100000 !important; }
+
+body .rechner-links{ background: unset; }
+.rechner-links .tarif-footer {
+	background: #fff;
+	padding: 5px 0;
+	text-align: center;
+}
+
+.rechner-links .tarif-footer .tarif-nummer {
+	color: #4d4b45;
+	font-family: 'IBMPlexSerif-SemiBold', Helvetica, Arial, Lucida, sans-serif;
+	font-size: 16px;
+}
+
+.rechner-links .tarif-footer .tarif-nummer .nummer {
+	color: #50af31;
+	font-family: 'IBMPlexSerif-Bold', Helvetica, Arial, Lucida, sans-serif;
+	font-size: 18px;
+}
+
+body .edc .iban .group{ margin-right: 8px; display: flex; }
+body .edc .iban .group:last-child{ margin-right: 0; }
+
+@media (max-width:1000px){
+	.edc form .fieldset .field.jumping_wrapper{ flex-flow: row wrap; }
+	body .edc .iban .group{ margin-bottom: 5px; }
+}
+
+
+.edc form .fieldset > div.col_1_2:nth-child(2n-1){ padding-left: 0; }
+.edc form .fieldset > div.col_1_2:nth-child(2n){ padding-right: 0; }
+
+.edc form .fieldset > div.col_1_4{ width: 25%; }
+
+@media (max-width: 800px){
+	.edc form .fieldset > div[class*="col_"]{ width: 100% !important; }
+}
+
+body .edc .edc_list{ margin-top: 0; margin-bottom: 40px; }
+
+body .edc .edc_tabs ul.navigation li{ transition: opacity ease-in 0.3s; }
+body .edc .edc_tabs ul.navigation li a img{ margin-bottom: 6px; }
+body .edc .edc_tabs[class*="theme_"]:not(.landing) ul.navigation li:not(.active){ opacity: 0.6; }
+
+
+.edc .edc.item .field{ position: relative; }
+.edc .edc.item .field .required_text{ display: none; position: absolute; top: 0; right: 0; padding: 3px 7px; font-size: 12px; color: #fff; background: #a00; max-width: 100%; overflow: hidden; white-space: nowrap; transition: height ease-in 0.3s; height: 0; align-items: center; }
+/*.edc form .col_2.required .label .field,.edc form .label .field.required{ padding-top: 25px; }*/
+.edc .edc.item .field.required .required_text{ display: flex; height: 30px; }
+.edc .edc.item .field.required.to_bottom{ padding-bottom: 30px; }
+.edc .edc.item .field.required.to_bottom .required_text{ top: auto; bottom: 0; }
+.edc .edc.item .field.required.to_top{ padding-top: 40px; }
+.edc .edc.item .field.required.to_top .required_text{ top: 0; left: 0; right: auto; }

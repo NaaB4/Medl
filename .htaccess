@@ -1,0 +1,185 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+
+# add a trailing slash to /wp-admin
+	RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^ - [L]
+	RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+	RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+	RewriteRule . index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN WP-Optimize Browser Cache
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType text/css "access 28 days"
+	ExpiresByType text/html "access 28 days"
+	ExpiresByType image/gif "access 28 days"
+	ExpiresByType image/png "access 28 days"
+	ExpiresByType image/jpg "access 28 days"
+	ExpiresByType image/jpeg "access 28 days"
+	ExpiresByType image/webp "access 28 days"
+	ExpiresByType image/x-icon "access 28 days"
+	ExpiresByType application/pdf "access 28 days"
+	ExpiresByType application/javascript "access 28 days"
+	ExpiresByType text/x-javascript "access 28 days"
+	ExpiresByType application/x-shockwave-flash "access 28 days"
+	ExpiresDefault "access 28 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+	<filesMatch "\.(ico|jpe?g|png|gif|webp|swf)$">
+		Header set Cache-Control "public"
+	</filesMatch>
+	<filesMatch "\.(css)$">
+		Header set Cache-Control "public"
+	</filesMatch>
+	<filesMatch "\.(js)$">
+		Header set Cache-Control "private"
+	</filesMatch>
+	<filesMatch "\.(x?html?|php)$">
+		Header set Cache-Control "private, must-revalidate"
+	</filesMatch>
+</IfModule>
+
+#Disable ETag
+FileETag None
+# END WP-Optimize Browser Cache
+# BEGIN WP-Optimize Gzip compression
+<IfModule mod_filter.c>
+	<IfModule mod_deflate.c>
+# Compress HTML, CSS, JavaScript, Text, XML and fonts
+		AddType application/vnd.ms-fontobject .eot
+		AddType font/ttf .ttf
+		AddType font/otf .otf
+		AddType font/x-woff .woff
+		AddType image/svg+xml .svg
+
+		AddOutputFilterByType DEFLATE application/javascript
+		AddOutputFilterByType DEFLATE application/rss+xml
+		AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+		AddOutputFilterByType DEFLATE application/x-font
+		AddOutputFilterByType DEFLATE application/x-font-opentype
+		AddOutputFilterByType DEFLATE application/x-font-otf
+		AddOutputFilterByType DEFLATE application/x-font-truetype
+		AddOutputFilterByType DEFLATE application/x-font-ttf
+		AddOutputFilterByType DEFLATE application/x-font-woff
+		AddOutputFilterByType DEFLATE application/x-javascript
+		AddOutputFilterByType DEFLATE application/xhtml+xml
+		AddOutputFilterByType DEFLATE application/xml
+		AddOutputFilterByType DEFLATE font/opentype
+		AddOutputFilterByType DEFLATE font/otf
+		AddOutputFilterByType DEFLATE font/ttf
+		AddOutputFilterByType DEFLATE font/woff
+		AddOutputFilterByType DEFLATE image/svg+xml
+		AddOutputFilterByType DEFLATE image/x-icon
+		AddOutputFilterByType DEFLATE text/css
+		AddOutputFilterByType DEFLATE text/html
+		AddOutputFilterByType DEFLATE text/javascript
+		AddOutputFilterByType DEFLATE text/plain
+		AddOutputFilterByType DEFLATE text/xml
+
+# Remove browser bugs (only needed for really old browsers)
+		BrowserMatch ^Mozilla/4 gzip-only-text/html
+		BrowserMatch ^Mozilla/4\.0[678] no-gzip
+		BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+		Header append Vary User-Agent
+	</IfModule>
+</IfModule>
+# END WP-Optimize Gzip compression
+
+# Wordfence WAF
+<IfModule mod_php5.c>
+	php_value auto_prepend_file 'wordfence-waf.php'
+</IfModule>
+<IfModule mod_php7.c>
+	php_value auto_prepend_file 'C:\OSPanel\domains\medl.ivato.de\wordfence-waf.php'
+</IfModule>				
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF
+
+RewriteEngine On
+
+RedirectMatch 301 ^/login(\/?)$ https://onlineservice.service-rz.de/?act=login&werknr=31&tid=99f597e21a0e9efcf9f9c3665ae7e10b#normal
+RedirectMatch 301 ^/service(\/?)$ /service/kontakt
+RedirectMatch 301 ^/dienstleistungen(\/?)$ /dienstleistungen/energieausweis/
+RedirectMatch 301 ^/erdgas(\/?)$ /erdgas/erdgas-tarife
+Redirect 301 /foerderprogramm /erdgas/erdgas-foerderprogramm
+Redirect 301 /baustellen /service/baustellen
+RedirectMatch 301 ^/medlinnovation(\/?)$ /medlinnovation/e-mobilitaet
+RedirectMatch 301 ^/gruenstrom(\/?)$ /gruenstrom/strom-tarife
+
+
+Redirect 301 /gruenstrom/strom-tarife/e-mobilitaet/medlautostromflex /medlinnovation/e-mobilitaet/
+Redirect 301 /medlinnovation/e-mobilitaet/medlautostrombox https://medl.de/medlinnovation/e-mobilitaet/
+Redirect 301 /medlinnovation/e-mobilitaet/medlautostromflex https://medl.de/medlinnovation/e-mobilitaet/
+
+# RewriteRule ^gruenstrom/$ https://www.medl.de/gruenstrom/strom-tarife/ [L,NC,R=301]
+# RewriteRule ^medlinnovation/?$ /medlinnovation/e-mobilitaet/ [L,NC,R=301]
+# RewriteRule ^service/?$ /service/kontakt/ [L,NC,R=301]
+# RewriteRule ^baustellen/?$ /service/baustellen/ [L,NC,R=301]
+# RewriteRule ^foerderprogramm/?$ /erdgas/erdgas-foerderprogramm [L,NC,R=301]
+# RewriteRule ^erdgas/?$ /erdgas/erdgas-tarife/ [L,NC,R=301]
+# RewriteRule ^service/?$ /service/kontakt/ [L,NC,R=301]
+
+Redirect 301 /heizungsnotdienst https://www.medl.de/service/stoerungen-melden/
+Redirect 301 /sonnenstrom https://www.medl.de/medlinnovation/medlPhotovoltaik/
+Redirect 301 /emobilitaet https://www.medl.de/medlinnovation/e-mobilitaet/
+Redirect 301 /medlinnovation/nahwaerme https://www.medl.de/nahwaerme
+Redirect 301 /strom/e-mobilitaet https://www.medl.de/medlinnovation/e-mobilitaet/
+Redirect 301 /downloads https://www.medl.de/service/downloads/
+Redirect 301 /kundenportal https://onlineservice.service-rz.de/?act=login&werknr=31&tid=c1c444fccb9c3bb86927a783ee54517a#normal
+Redirect 301 /medlStarter https://www.medl.de/gruenstrom/strom-tarife/
+Redirect 301 /ansprechpartner https://www.medl.de/service/kontakt/
+Redirect 301 /netz https://www.medl.de/erdgas/erdgasnetz/
+Redirect 301 /veranstaltungen https://www.medl.de/service/aktuelles/
+Redirect 301 /engagement https://www.medl.de/service/aktuelles/
+Redirect 301 /contracting https://www.medl.de/dienstleistungen-gk/contracting/
+Redirect 301 /Inbetriebsetzung https://www.medl.de/
+Redirect 301 /zertifikate https://www.medl.de/
+Redirect 301 /verbrauchsdaten https://www.medl.de/dienstleistungen/energieausweis/
+Redirect 301 /heizungsinfo https://www.medl.de/
+Redirect 301 /medlflexauto https://www.medl.de/medlinnovation/e-mobilitaet/
+Redirect 301 /energieberatung https://www.medl.de/dienstleistungen/energieberatung/
+Redirect 301 /stromausfall https://www.medl.de/service/stoerungen-melden/
+Redirect 301 /Anschlussnehmer https://www.medl.de/erdgas/erdgasnetz/
+Redirect 301 /windrad https://www.medl.de/gruenstrom/unsere-anlagen/
+Redirect 301 /geschaeftskunden https://www.medl.de/startseite-geschaeftskunden/
+Redirect 301 /geschaeftsberichte https://www.medl.de/service/downloads/
+Redirect 301 /ueber-medl https://www.medl.de/unternehmen/
+Redirect 301 /erdgas/erdgasnetzanschlussfoerderung https://www.medl.de/erdgas/erdgas-foerderprogramm/
+Redirect 301 /emobilitaet-geschaeftskunden https://www.medl.de/innovation-gk/e-mobilitaet/
+Redirect 301 /service/medl-online-service https://onlineservice.service-rz.de/?act=login&werknr=31&tid=c1c444fccb9c3bb86927a783ee54517a#normal
+Redirect 301 /strom https://www.medl.de/gruenstrom/strom-tarife/
+Redirect 301 /waerme-business https://www.medl.de/startseite-geschaeftskunden/
+Redirect 301 /waermestrom https:/www.medl.de//gruenstrom/heizstrom-tarife/
+
+
+
+
+
+#ads
+Redirect 301 /ueber-medl https://www.medl.de/unternehmen/
+#Redirect 301 /medlinnovation/e-mobilitaet/medlautostrombox https://medl.de/medlinnovation/e-mobilitaet/
+#Redirect 301 /strom/e-mobilitaet/medlautostromflex https://medl.de/medlinnovation/e-mobilitaet/
