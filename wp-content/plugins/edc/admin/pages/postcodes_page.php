@@ -10,7 +10,7 @@
 			if(isset($_POST['edc_remove_postcodes'])) die($this->edcRemovePostcodes($_POST));
 		}
 		protected function importPostCodes(){
-			if(!is_uploaded_file($_FILES['postcodes']['tmp_name'])) return EDCAdmin::inst()->ajaxResult('error',__('Failed to upload file. Please try again later.','edc'));
+		    if(!is_uploaded_file($_FILES['postcodes']['tmp_name'])) return EDCAdmin::inst()->ajaxResult('error',__('Failed to upload file. Please try again later.','edc'));
 			if(!file_exists(EDC_PLUGIN_PATH.'/inc/postcodes_importer.class.php')) return EDCAdmin::inst()->ajaxResult('error',__('Plugin files are corrupt. You can not use importer.','edc'));
 			require_once EDC_PLUGIN_PATH.'/inc/postcodes_importer.class.php';
 			$importer=new PostcodesImporter($_FILES['postcodes']['tmp_name'],$_FILES['postcodes']['name']);
@@ -36,7 +36,8 @@
 		protected function edcProcessPostcode($data){
 			do_action('edc_before_postcode_process',$data,(!is_numeric($data['edc_postcode']) ? 'new' : 'update'));
 			$res=false;
-			$res=EDCH::codes('update',$data['edc_postcode'],$data['name'],$data['code'],$data['type']);
+			$street_list = json_encode($data["street_list"], JSON_UNESCAPED_UNICODE | JSON_HEX_QUOT);
+			$res=EDCH::codes('update',$data['edc_postcode'],$data['name'],$data['code'],$data['type'],$street_list);
 			if($res===false) EDCAdmin::inst()->cookieResult('error',__('An error occured, please try again later','edc'));
 			do_action('edc_after_postcode_process',$res,$data,(!is_numeric($data['edc_postcode']) ? 'new' : 'update'));
 			if($data['edc_postcode']=='new') EDCAdmin::inst()->cookieResult('success',__('Postcode was succesfully added','edc'));

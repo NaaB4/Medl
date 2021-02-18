@@ -123,14 +123,14 @@ class EDCH{
 	/* postcodes pseudonyms */
 	static function postcodes(){ return EDC_POSTCODES; }
 	static function codes($key=''){
-		if($key=='') return false;
+	    if($key=='') return false;
 		$args=func_get_args();
 		switch($key){
 			case 'add' :
 				return self::postcodes()::add($args[1],$args[2],$args[3]);
 			break;
 			case 'update' :
-				return self::postcodes()::update($args[1],$args[2],$args[3],$args[4]);
+				return self::postcodes()::update($args[1],$args[2],$args[3],$args[4],$args[5]);
 			break;
 			case 'remove' :
 				return self::postcodes()::remove($args[1]);

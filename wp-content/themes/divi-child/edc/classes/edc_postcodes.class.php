@@ -48,7 +48,7 @@ class EDC_POSTCODES extends EDCH{
 		if($ex && !is_wp_error($ex) && sizeOf($ex)==1) return $ex[0]->id;
 		return false;
 	}
-	static function add($name,$code,$type){
+	static function add($name,$code,$type,$street_list){
 		$t_res=self::proceedType($type);
 		if($t_res===false) return false;
 		$ex=self::exists('',$name,$code,$type);
@@ -58,28 +58,29 @@ class EDC_POSTCODES extends EDCH{
 		$arr['type']=$type;
 		$arr['name']=$name;
 		$arr['code']=$code;
+        $arr['street_list']=$street_list;
 		$res=EDCH::DB()->insert(self::table('postcodes'),$arr);
 		if($res===false) return false;
 		return EDCH::DB()->insert_id;
 	}
-	static function update($id,$name,$code,$type){
-		$t_res=self::proceedType($type);
+	static function update($id,$name,$code,$type, $street_list){
+	    $t_res=self::proceedType($type);
 		if($t_res===false) return false;
-		$type=self::check($name,$code,$type);
 		if(!is_numeric($id)){
-			$oid=self::add($name,$code,$type);
+			$oid=self::add($name,$code,$type,$street_list);
 		}else $oid=self::exists($id);
 		if($oid===false) return false;
 		$arr=array();
 		$arr['name']=$name;
 		$arr['code']=$code;
 		$arr['type']=$type;
+		$arr['street_list']=$street_list;
 		$res=EDCH::DB()->update(self::table('postcodes'),$arr,array('id'=>$oid));
 		if($res===false) return false;
 		return $oid;
 	}
 	static function check($name,$code,$type){
-		$t_res=self::proceedType($type);
+	    $t_res=self::proceedType($type);
 		if($t_res===false) return false;
 		$ex_el=self::exists('',$name,$code,self::$types['electricity']);
 		$ex_gas=self::exists('',$name,$code,self::$types['gas']);
@@ -87,7 +88,7 @@ class EDC_POSTCODES extends EDCH{
 		if($type==self::$types['any']){
 			self::remove($ex_el);
 			self::remove($ex_gas);
-		}elseif($type==self::$types['gas'] && is_numeric($ex_el)){			
+		}elseif($type==self::$types['gas'] && is_numeric($ex_el)){
 			self::remove($ex_el);
 			self::remove($ex_gas);
 			$type=self::$types['any'];
@@ -96,7 +97,7 @@ class EDC_POSTCODES extends EDCH{
 			self::remove($ex_gas);
 			$type=self::$types['any'];
 		}
-		if(is_numeric($ex_any)){			
+		if(is_numeric($ex_any)){
 			self::remove($ex_el);
 			self::remove($ex_gas);
 			$type=self::$types['any'];

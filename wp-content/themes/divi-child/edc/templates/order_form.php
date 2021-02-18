@@ -44,12 +44,16 @@
 					<div class="fieldset">
 						<div class="col_1_2">
 							<div class="name"><?=__('Street','edc')?>  <span class="red">*</span>:</div>
-							<div class="field">								
-								<select name="edc_street" value="" data-required="1">
-									<option value=""><?=__('Choose','edc')?></option>
-									<?=$data['streets_options']?>
-								</select>
-								<div class="required_text"><?=__('Enter your street','edc')?></div>
+							<div class="field">
+                                <?php if ($data["street"]) : ?>
+                                    <input type="text" name="edc_street" value="<?= $data["street"] ?>" disabled data-required="1">
+                                <?php else: ?>
+                                    <select name="edc_street" value="" data-required="1">
+                                        <option value=""><?= __('Choose', 'edc') ?></option>
+                                        <?= $data['streets_options'] ?>
+                                    </select>
+                                <?php endif; ?>
+                                <div class="required_text"><?=__('Enter your street','edc')?></div>
 							</div>
 						</div>
 						<div class="col_1_4">

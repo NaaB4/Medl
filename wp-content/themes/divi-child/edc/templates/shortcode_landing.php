@@ -53,11 +53,16 @@
 				<div class="edc_form_row postal_code">
 					<input type="text" name="postcode" placeholder="PLZ" data-required="numeric" oninput="edc.getPostalCodesList(event,this);" >
 				</div>
-				<div class="edc_form_row location">
-					<select name="districts" data-required="1">
-						<option value=""><?=__('Stadt auswählen','medl')?></option>
-					</select>
-				</div>
+                <div class="edc_form_row location">
+                    <select onchange="edc.getStreetList(event,this);" name="districts" data-required="1">
+                        <option value=""><?=__('Stadt auswählen','medl')?></option>
+                    </select>
+                </div>
+                <div class="edc_form_row street">
+                    <select name="street" data-required="1">
+                        <option value=""><?=__('Street','edc')?></option>
+                    </select>
+                </div>
 				<div class="edc_form_row checkbox">					
 					<input type="checkbox" id="st_lower_30_<?=$edc_counter?>" name="lower_30" value="1">
 					<label for="st_lower_30_<?=$edc_counter?>" class="edc_checkbox">Ich bin unter 30 Jahre alt</label>
@@ -113,11 +118,16 @@
 				<div class="edc_form_row postal_code">
 					<input type="text" name="postcode" placeholder="PLZ" data-required="numeric" oninput="edc.getPostalCodesList(event,this);" >
 				</div>
-				<div class="edc_form_row location">
-					<select name="districts" data-required="1">
-						<option value=""><?=__('Stadt auswählen','medl')?></option>
-					</select>
-				</div>
+                <div class="edc_form_row location">
+                    <select onchange="edc.getStreetList(event,this);" name="districts" data-required="1">
+                        <option value=""><?=__('Stadt auswählen','medl')?></option>
+                    </select>
+                </div>
+                <div class="edc_form_row street">
+                    <select name="street" data-required="1">
+                        <option value=""><?=__('Street','edc')?></option>
+                    </select>
+                </div>
 				<div class="edc_form_row checkbox">					
 					<input type="checkbox" id="g_lower_30_<?=$edc_counter?>" name="lower_30" value="1">
 					<label for="g_lower_30_<?=$edc_counter?>" class="edc_checkbox">Ich bin unter 30 Jahre alt</label>
@@ -184,11 +194,16 @@
 				<div class="edc_form_row postal_code">
 					<input type="text" name="postcode" placeholder="PLZ" data-required="numeric" oninput="edc.getPostalCodesList(event,this);" >
 				</div>
-				<div class="edc_form_row location">
-					<select name="districts" data-required="1">
-						<option value=""><?=__('Stadt auswählen','medl')?></option>
-					</select>
-				</div>
+                <div class="edc_form_row location">
+                    <select onchange="edc.getStreetList(event,this);" name="districts" data-required="1">
+                        <option value=""><?=__('Stadt auswählen','medl')?></option>
+                    </select>
+                </div>
+                <div class="edc_form_row street">
+                    <select name="street" data-required="1">
+                        <option value=""><?=__('Street','edc')?></option>
+                    </select>
+                </div>
 				<div class="edc_form_row checkbox">					
 					<input type="checkbox" id="c_lower_30_<?=$edc_counter?>" name="lower_30" value="1">
 					<label for="c_lower_30_<?=$edc_counter?>" class="edc_checkbox">Ich bin unter 30 Jahre alt</label>

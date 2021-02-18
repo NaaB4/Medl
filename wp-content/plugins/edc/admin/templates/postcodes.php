@@ -35,13 +35,13 @@
 				</tr>
 			</thead><tbody>
 			<?php foreach($data['postcodes'] as $code) : ?>
-				<tr>
+                <tr>
 					<th class="check-column"><input type="checkbox" name="postcode_<?=$code->id?>"></th>
 					<td>
 						<strong><?=$code->code?></strong>
 						<div class="row-actions">
 							<span class="edit">
-								<a href="javascript:void(0);" onclick="edc_admin.editPostcode(<?=$code->id?>,'<?=$code->code?>','<?=$code->name?>','<?=$code->type?>');" aria-label="<?=__('Edit','edc')?>"><?=__('Edit','edc')?></a> | 
+								<a href="javascript:void(0);" onclick="edc_admin.editPostcode(<?=$code->id?>,'<?=$code->code?>','<?=$code->name?>','<?=$code->type?>', '<?=$code->street_list?>');" aria-label="<?=__('Edit','edc')?>"><?=__('Edit','edc')?></a> |
 							</span>
 							<span class="trash">
 								<a href="javascript:void(0);" class="submitdelete" onclick="edc_admin.deletePostcode(<?=$code->id?>,'<?=__('Are you sure? This action can not be undone!','edc')?>');" aria-label="<?=__('Remove','edc')?>"><?=__('Remove','idea_catalog')?></a>

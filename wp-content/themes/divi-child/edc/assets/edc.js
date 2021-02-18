@@ -600,16 +600,22 @@
 		}
 	}
 	edcp.getPostalCodesList=function(ev,el){
-		let l=el.closest('form').querySelector('.edc_form_row.location');
+		let f = el.closest('form'),
+			l = f.querySelector('.edc_form_row.location'),
+			s = f.querySelector('.edc_form_row.street'),
+			s_sel = s.querySelector('select[name=street]');
 		this.log(l);
 		if(l) $(l).removeClass('active');
+		if(s) $(s).removeClass('active');
+		if(s_sel) s.setAttribute("required", "1");
 		if(el.value.length<3) return false;
 		let it=setInterval((function(edc,el,len,l){ return function(){
 			if(el.value.length!=len){
 				if(l) $(l).removeClass('active');
+				if(s) $(s).removeClass('active');
 			}else{
 				let val=el.value;
-				let f=el.form ? el.form : $(el).parents('form').get(0);
+				// let f=el.form ? el.form : $(el).parents('form').get(0);
 				let type=f.type.value;
 				edc.formLoading(f);
 				$.ajax({
@@ -623,7 +629,7 @@
 							if(!sel) return false;
 							if(data.type=='success'){
 								sel.innerHTML=data.text;
-								if(sel.options.length==2) sel.options[1].selected=true;
+								// if(sel.options.length==2) sel.options[1].selected=true;
 								if(l) $(l).addClass('active');
 							}else{
 								edc.formResult(f,data);
@@ -631,11 +637,51 @@
 							edc.formLoading(f,true);
 						}catch(ex){ edc.log('Error with postcodes result',ex); }
 					},
-					error: function(data){},
+					error: function(data){ },
 				});	
 			}
 			clearInterval(it);
 		}})(this,el,el.value.length,l),500);
+	}
+	edcp.getStreetList = function (ev, el) {
+		let f = el.closest("form"),
+			l = f.querySelector('.edc_form_row.location select'),
+			s = f.querySelector('.edc_form_row.street'),
+			val = l.options[l.selectedIndex].value;
+		if (val === "") {
+			if(s) $(s).removeClass('active');
+		} else {
+			let type = f.type.value;
+			edc.formLoading(f);
+			$.ajax({
+				url: window.location,
+				type: 'post',
+				data: {'edc_get_street_list': val, 'type': type},
+				success: function (data) {
+					console.log(data);
+					try {
+						data = JSON.parse(data);
+						let sel = f.querySelector('select[name="street"]');
+						if (!sel) return false;
+						if (data.type == 'success') {
+							if(!data.isNull) {
+								sel.innerHTML = data.text;
+								if (s) $(s).addClass('active');
+							} else {
+								sel.removeAttribute("data-required");
+							}
+						} else {
+							edc.formResult(f, data);
+						}
+						edc.formLoading(f, true);
+					} catch (ex) {
+						edc.log('Error with postcodes result', ex);
+					}
+				},
+				error: function (data) {
+				},
+			});
+		}
 	}
 	edcp.submitTariff=function(ev,el,tid){
 		ev.preventDefault();

@@ -49,18 +49,22 @@ class PostcodesImporter{
 			if($row[0]!=''){ $k=is_numeric($k) ? ++$k : 0;	}
 			if($row[0]!='') $this->data[$k]['name']=$row[0];
 			if($row[1]!='') $this->data[$k]['code']=$row[1];
-			if($row[2]!='') $this->data[$k]['type']=$row[2];
+            if($row[2]!='') $this->data[$k]['type']=$row[2];
+            if($row[3]!='') {
+                $street_list = explode("\n", $row[3]);
+                $this->data[$k]['street_list'] = json_encode($street_list, JSON_UNESCAPED_UNICODE | JSON_HEX_QUOT);
+            }
 		}
 	}
 	
 	private function insertInfo(){
 		if(!$this->data || sizeOf($this->data)==0) return false;
 		$res=true;
-		foreach($this->data as $data){
+        foreach($this->data as $data){
 			EDCH::trimArray($data);
 			if($data['name']=='' || !is_numeric($data['code'])) continue;
 			if(!isset($data['type']) || $data['type']=='') $data['type']='any';
-			$res=EDCH::codes('update','',$data['name'],$data['code'],$data['type']);
+			$res=EDCH::codes('update','',$data['name'],$data['code'],$data['type'],$data['street_list']);
 			if($res===false) break;
 		}
 		return $res!==false;

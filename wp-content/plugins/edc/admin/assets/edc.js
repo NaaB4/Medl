@@ -126,6 +126,8 @@ function EDC(){
 		//wp-editor-area
 		//tinyMCE.getContent
 		var obj=this;
+		console.log(fd);
+		return;
 		$.ajax({
 			url: window.location,
 			type: 'post',
@@ -222,6 +224,13 @@ EDC.prototype.addPostcode=function(){
 	$('#postcode_popup form').get(0).reset();
 	$('#postcode_popup form input[name="edc_postcode"]').val('new');
 }
+EDC.prototype.addStreet=function(el, value = ""){
+	$(el).before(`<div class="field"><input type="text" class="street" name="street_list[]" value="${value}"><div class="close" onclick="edc_admin.removeStreet(this)">×</div></div>`);
+}
+EDC.prototype.removeStreet=function(el) {
+	let field = el.closest(".field");
+	if(field) $(field).remove();
+}
 EDC.prototype.editPostcode=function(id,code,name,type){
 	$('#postcode_popup').addClass('active');
 	$('#postcode_popup .edit_title').addClass('active');
@@ -231,6 +240,14 @@ EDC.prototype.editPostcode=function(id,code,name,type){
 	$('#postcode_popup form input[name="name"]').val(name);
 	$('#postcode_popup form select[name="type"]').val(type).trigger("chosen:updated");
 	$('#postcode_popup form input[name="code"]').val(code);
+	$('#postcode_popup .street_list .field').remove();
+	if(typeof street_list !== "undefined" && street_list[id]) {
+		$.each(street_list[id], function (i, value) {
+			EDC.prototype.addStreet($('#postcode_popup .street_list .street_add'), value);
+		});
+	} else {
+		EDC.prototype.addStreet($('#postcode_popup .street_list .street_add'));
+	}
 }
 EDC.prototype.importPostcodes=function(){
 	if(!document.body.querySelector('#postcodes_import_form')){
@@ -384,6 +401,7 @@ EDC.prototype.getPostcodesForImporter=function(){
 	el.style.top='-9999%';
 	document.body.appendChild(el);
 	el.select();
+	console.log(el);
 	document.execCommand('copy');
 	document.body.removeChild(el);
 }

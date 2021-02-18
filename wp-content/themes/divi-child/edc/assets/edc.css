@@ -32,8 +32,8 @@ body .edc .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ co
 body .edc .edc_form_row .edc_persons label{ cursor: pointer; margin-right: 30px; }
 body .edc .edc_form_row .edc_persons label:last-of-type{ margin-right: 0; }
 body .edc .edc_form_row .edc_persons .text{ width: 100%; }
-body .edc .edc_form_row.location{ display: none; }
-body .edc .edc_form_row.location.active{ display: block; }
+body .edc .edc_form_row.location, body .edc .edc_form_row.street{ display: none; }
+body .edc .edc_form_row.location.active, body .edc .edc_form_row.street.active{ display: block; }
 body .edc .theme_gas .edc_form_row .edc_persons{ font-size: 20px; }
 body .edc .theme_gas .edc_form_row .edc_persons input[type="radio"]:checked+label > div{ font-size: 40px; }
 

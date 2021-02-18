@@ -31,17 +31,23 @@
 					<th class="manage-column column-cb check-column"><input type="checkbox"></th>
 					<th class="manage-column"><?=__('Postal code','edc')?></th>
 					<th class="manage-column"><?=__('Postal place','edc')?></th>
-					<th class="manage-column"><?=__('Postal code type','edc')?></th>
+                    <th class="manage-column"><?=__('Postal code type','edc')?></th>
+                    <th class="manage-column"><?=__('Street','edc')?></th>
 				</tr>
 			</thead><tbody>
-			<?php foreach($data['postcodes'] as $code) : ?>
+			<?php
+                $street_list = [];
+                foreach($data['postcodes'] as $code) :
+                $code_street_list = json_decode($code->street_list);
+                $street_list[$code->id] = $code_street_list;
+                ?>
 				<tr>
 					<th class="check-column"><input type="checkbox" name="postcode_<?=$code->id?>"></th>
 					<td>
 						<strong><?=$code->code?></strong>
 						<div class="row-actions">
 							<span class="edit">
-								<a href="javascript:void(0);" onclick="edc_admin.editPostcode(<?=$code->id?>,'<?=$code->code?>','<?=$code->name?>','<?=$code->type?>');" aria-label="<?=__('Edit','edc')?>"><?=__('Edit','edc')?></a> | 
+								<a href="javascript:void(0);" onclick="edc_admin.editPostcode(<?=$code->id?>,'<?=$code->code?>','<?=$code->name?>','<?=$code->type?>');" aria-label="<?=__('Edit','edc')?>"><?=__('Edit','edc')?></a> |
 							</span>
 							<span class="trash">
 								<a href="javascript:void(0);" class="submitdelete" onclick="edc_admin.deletePostcode(<?=$code->id?>,'<?=__('Are you sure? This action can not be undone!','edc')?>');" aria-label="<?=__('Remove','edc')?>"><?=__('Remove','edc')?></a>
@@ -49,9 +55,13 @@
 						</div>
 					</td>
 					<td><?=$code->name?></td>
-					<td><?=EDCH::codes('type',$code->type)?></td>
+                    <td><?=EDCH::codes('type',$code->type)?></td>
+                    <td><?= $code_street_list ? implode("<br/>", $code_street_list) : "" ?></td>
 				</tr>
 			<?php endforeach; ?>
+                <script>
+                    let street_list = <?= json_encode($street_list); ?>;
+                </script>
 			</tbody></table>
 			<?=$data['pagination']?>
 		<?php endif; ?>
@@ -62,10 +72,15 @@
 					<div class="title add_title"><?=__('Add postcode','edc')?></div>
 					<div class="title edit_title"><?=__('Edit postcode','edc')?></div>
 					<form method="POST" action="" name="postcode_form">
-						<div class="label">
-							<div class="name"><?=__('Location','edc')?></div>
-							<div class="field"><input type="text" name="name"></div>
-						</div>
+                        <div class="label">
+                            <div class="name"><?=__('Location','edc')?></div>
+                            <div class="field"><input type="text" name="name"></div>
+                        </div>
+                        <div class="label street_list">
+                            <div class="name"><?=__('Street','edc')?></div>
+                            <div class="field"><input type="text" class="street" name="street_list[]"></div>
+                            <div class="street_add edc_submit" onclick="edc_admin.addStreet(this);"><?=__('Add','edc')?></div>
+                        </div>
 						<div class="label">
 							<div class="name"><?=__('Postal code','edc')?></div>
 							<div class="field"><input type="text" name="code"></div>

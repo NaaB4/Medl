@@ -296,14 +296,20 @@ class EDCOutput{
 		//var_dump($suppliers);
 		$options=[];
 		foreach($suppliers as $s) if($s!='') $options[]=['name'=>$s,'value'=>htmlspecialchars($s)];
-		$streets=array_map('trim',explode("\n",EDCH::opts('get','edc_streets_list','settings')));
-		natcasesort($streets);
-		$soptions=[];
-		foreach($streets as $s) if($s!='') $soptions[]=['name'=>$s,'value'=>htmlspecialchars($s)];
+		$steps_data = $this->_edc->steps_data;
+		$first_step_data = $steps_data['first'] ?? [];
+		$street = NULL;
+		$street_list = json_decode($first_step_data["postcode_data"]["street_list"]);
+        natcasesort($street_list);
+		$soptions = [];
+        foreach($street_list as $key => $street) if($street!='') $soptions[]=['name'=>$street,'value'=>$key];
+		if(is_numeric($first_step_data["street"]) && $street_list[$first_step_data["street"]]) {
+		 $street = $street_list[$first_step_data["street"]];
+        }
 		
 		$html=EDCH::loadTemplate('order_form',array(
 			'tariff'=>$this->_edc->tariff,
-			'step_data'=>htmlspecialchars(json_encode($this->_edc->steps_data)),
+			'step_data'=>htmlspecialchars(json_encode($steps_data)),
 			'postal_code'=>$this->_edc->steps_data['first']['postcode'],
 			'annual_consumption'=>$this->_edc->steps_data['first']['annual_consumption'],
 			'annual_consumption_el'=>$this->_edc->steps_data['first']['annual_consumption_el'],
@@ -311,6 +317,7 @@ class EDCOutput{
 			'district_name'=>$code->name,
 			'direct_debit_text'=>EDCH::opts('get','edc_sepa_text','settings'),
 			'suppliers_options'=>EDCH::simpleOptions($options),
+			'street' => $street,
 			'streets_options'=>EDCH::simpleOptions($soptions),
 		));
 		$this->_output_done=true;
