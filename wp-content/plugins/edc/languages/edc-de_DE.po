@@ -1,0 +1,1442 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: EDCalculator\n"
+"POT-Creation-Date: 2020-04-01 11:05+0300\n"
+"PO-Revision-Date: 2020-04-01 11:06+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: edc.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: admin/admin.php:83
+msgid "EDCalculator"
+msgstr "Tarifrechner"
+
+#: admin/admin.php:84 admin/templates/settings.php:6
+msgid "EDCalculator Settings"
+msgstr "Einstellungen"
+
+#: admin/admin.php:85 admin/templates/orders.php:6
+msgid "EDCalculator Orders"
+msgstr "Bestellungen"
+
+#: admin/admin.php:86
+msgid "EDCalculator Postcodes"
+msgstr "Postleitzahlen"
+
+#: admin/admin.php:87 admin/templates/tariffs.php:6
+msgid "EDCalculator Tariffs"
+msgstr "Tarife"
+
+#: admin/admin.php:88
+msgid "EDCalculator Documentation"
+msgstr "Hilfe"
+
+#: admin/pages/orders_page.php:15 admin/pages/orders_page.php:20
+#: admin/pages/postcodes_page.php:21 admin/pages/postcodes_page.php:29
+#: admin/pages/postcodes_page.php:40 admin/pages/postcodes_page.php:50
+#: admin/pages/settings_page.php:22 admin/pages/settings_page.php:75
+#: admin/pages/tariffs_page.php:28 admin/pages/tariffs_page.php:39
+#: admin/pages/tariffs_page.php:67 admin/pages/tariffs_page.php:75
+#: edc.class.php:82 edc.class.php:119 edc.class.php:157 edc.class.php:182
+#: edc.class.php:268
+msgid "An error occured, please try again later"
+msgstr "Ein Fehler ist aufgetreten, bitte versuchen Sie es später noch einmal"
+
+#: admin/pages/postcodes_page.php:13 admin/pages/tariffs_page.php:59
+msgid "Failed to upload file. Please try again later."
+msgstr ""
+"Die Datei konnte nicht hochgeladen werden. Bitte versuchen Sie es später "
+"noch einmal."
+
+#: admin/pages/postcodes_page.php:14 admin/pages/tariffs_page.php:60
+msgid "Plugin files are corrupt. You can not use importer."
+msgstr ""
+"Plugin-Dateien sind fehlerhaft. Sie können den Importer nicht verwenden."
+
+#: admin/pages/postcodes_page.php:32 admin/pages/postcodes_page.php:33
+msgid "Postcodes has been succesfully imported."
+msgstr "Die Postleitzahlen wurden erfolgreich importiert."
+
+#: admin/pages/postcodes_page.php:42
+msgid "Postcode was succesfully added"
+msgstr "Die Postleitzahl wurde erfolgreich hinzugefügt"
+
+#: admin/pages/postcodes_page.php:43
+msgid "Postcode was succesfully updated"
+msgstr "Die Postleitzahl wurde erfolgreich aktualisiert"
+
+#: admin/pages/postcodes_page.php:52
+msgid "Postcode was succesfully removed"
+msgstr "Die Postleitzahl wurde erfolgreich entfernt"
+
+#: admin/pages/postcodes_page.php:53
+msgid "Postcode was succesfully removed."
+msgstr "Die Postleitzahl wurde erfolgreich entfernt."
+
+#: admin/pages/postcodes_page.php:65 admin/pages/postcodes_page.php:66
+msgid "Removed postcodes: "
+msgstr "Postleitzahlen wurden entfernt: "
+
+#: admin/pages/settings_page.php:42
+#, php-format
+msgid "The next fields are not valid: %s"
+msgstr "Die folgenden Felder sind nicht gültig: %s"
+
+#: admin/pages/settings_page.php:55
+#, fuzzy
+#| msgid "While options updating error occured. Please try again later."
+msgid "While options updating An error occured, please try again later"
+msgstr ""
+"Bei der Aktualisierung der Optionen ist ein Fehler aufgetreten. Bitte "
+"versuchen Sie es später noch einmal."
+
+#: admin/pages/settings_page.php:57
+msgid "EDC settings has been updated succesfully."
+msgstr "Die Einstellungen wurden erfolgreich aktualisiert."
+
+#: admin/pages/settings_page.php:76
+#, fuzzy
+#| msgid "Tariff has been succesfully processed"
+msgid "Data has been successfully reset"
+msgstr "Der Tarif wurde erfolgreich bearbeitet"
+
+#: admin/pages/settings_page.php:90
+msgid "Before page content"
+msgstr "Vor dem Seiteninhalt"
+
+#: admin/pages/settings_page.php:91
+msgid "After page content"
+msgstr "Nach dem Seiteninhalt"
+
+#: admin/pages/settings_page.php:92
+msgid "Custom position (via shortcode)"
+msgstr "Benutzerdefinierte Position (via Shortcode)"
+
+#: admin/pages/settings_page.php:108
+msgid "Tariffs settings"
+msgstr "Tarifrechner"
+
+#: admin/pages/settings_page.php:112
+msgid "Eletricity"
+msgstr "Strom"
+
+#: admin/pages/settings_page.php:114 admin/pages/settings_page.php:147
+msgid "Upper limit (kWh)"
+msgstr "Obergrenze (kWh)"
+
+#: admin/pages/settings_page.php:120 admin/pages/settings_page.php:153
+msgid "Energy per 1 person"
+msgstr "Angabe für 1 Person"
+
+#: admin/pages/settings_page.php:126 admin/pages/settings_page.php:159
+msgid "Energy per 2 person"
+msgstr "Angabe für 2 Person"
+
+#: admin/pages/settings_page.php:132 admin/pages/settings_page.php:165
+msgid "Energy per 3 person"
+msgstr "Angabe für 3 Person"
+
+#: admin/pages/settings_page.php:138 admin/pages/settings_page.php:171
+msgid "Energy per 4 person"
+msgstr "Angabe für 4 Person"
+
+#: admin/pages/settings_page.php:145 admin/pages/tariffs_page.php:113
+#: admin/pages/tariffs_page.php:133 admin/templates/postcodes.php:78
+#: admin/templates/tariffs.php:54 classes/edc_postcodes.class.php:115
+#: front/templates/shortcode.php:8
+msgid "Gas"
+msgstr "Gas"
+
+#: admin/pages/settings_page.php:183
+msgid "Mail settings"
+msgstr "E-Mail"
+
+#: admin/pages/settings_page.php:188
+msgid "Mail from"
+msgstr "E-Mail von"
+
+#: admin/pages/settings_page.php:193
+msgid "Mail to"
+msgstr "E-Mail an"
+
+#: admin/pages/settings_page.php:199
+msgid "Mail banner"
+msgstr "E-Mail Banner"
+
+#: admin/pages/settings_page.php:203
+msgid "Subject of the customer notification e-mail"
+msgstr ""
+
+#: admin/pages/settings_page.php:207
+msgid "Text of the customer notification e-mail"
+msgstr ""
+
+#: admin/pages/settings_page.php:211
+msgid "Subject of the admin notification e-mail"
+msgstr ""
+
+#: admin/pages/settings_page.php:215
+msgid "Text of the admin notification e-mail"
+msgstr ""
+
+#: admin/pages/settings_page.php:225
+msgid "Main settings"
+msgstr "Allgemein"
+
+#: admin/pages/settings_page.php:230
+msgid "Price settings"
+msgstr "Preis Einstellungen"
+
+#: admin/pages/settings_page.php:232
+msgid "Price format"
+msgstr "Preisformat"
+
+#: admin/pages/settings_page.php:242
+msgid ""
+"Format for price on the site (in brackets are shown price numeric value, "
+"before brackets - format how price will be displayed on the site)"
+msgstr ""
+"Format für den Preis (in Klammern werden der numerische Wert des Preises "
+"angezeigt, vor den Klammern - Format, wie der Preis auf der Website "
+"angezeigt wird)."
+
+#: admin/pages/settings_page.php:245
+msgid "Use NDS on the site"
+msgstr "NDS auf der Website verwenden"
+
+#: admin/pages/settings_page.php:248
+msgid "None"
+msgstr "Keine"
+
+#: admin/pages/settings_page.php:249
+msgid "For private tariffs"
+msgstr "Für Privattarife"
+
+#: admin/pages/settings_page.php:250
+msgid "For business tariffs"
+msgstr "Für Geschäftstarife"
+
+#: admin/pages/settings_page.php:251
+msgid "For all tariffs"
+msgstr "Für alle Tarife"
+
+#: admin/pages/settings_page.php:253
+msgid ""
+"Here you can set for which tariffs NDS should be added. If you will choose "
+"something instead of \"None\" you have to enter NDS value in \"NDS value\" "
+"option."
+msgstr ""
+"Hier können Sie einstellen, für welche Tarife NDS hinzugefügt werden sollen. "
+"Wenn Sie etwas anstelle von „Keine“ wählen, müssen Sie den NDS-Wert in der "
+"Option „NDS-Wert“ eingeben."
+
+#: admin/pages/settings_page.php:256
+msgid "NDS value"
+msgstr "NDS Wert"
+
+#: admin/pages/settings_page.php:258
+msgid ""
+"This must be a number more than zero. Calculated price will be multiplied "
+"with value which entered in this option (based on option \"Use NDS on the "
+"site)."
+msgstr ""
+"Dies muss eine Zahl größer als Null sein. Der berechnete Preis wird mit dem "
+"Wert multipliziert, der in dieser Option eingegeben wurde (basierend auf der "
+"Option „NDS auf der Website verwenden“)."
+
+#: admin/pages/settings_page.php:263
+msgid "Tariff main form settings"
+msgstr "Einstellungen des Tarif-Hauptformulars"
+
+#: admin/pages/settings_page.php:265
+msgid "User can choose tariff type"
+msgstr ""
+
+#: admin/pages/settings_page.php:270
+msgid "Text when the chosen postal code is outside from coverage area"
+msgstr ""
+
+#: admin/pages/settings_page.php:272 edc.class.php:92
+msgid "Chosen postal code is outside a coverage area"
+msgstr ""
+
+#: admin/pages/settings_page.php:275
+msgid "Page for gas calculator"
+msgstr "Seite für den Gasrechner"
+
+#: admin/pages/settings_page.php:277
+msgid ""
+"Gas tab will be linked to this page (if chosen redirect to page variant in "
+"\"Calculator tabs action\" option)"
+msgstr ""
+"Die Registerkarte Gas wird mit dieser Seite verlinkt (wenn Sie in der Option "
+"„Aktion Rechnerregisterkarten“ die Option Umleiten zur Seitenvariante "
+"gewählt haben)."
+
+#: admin/pages/settings_page.php:280
+msgid "Page for electricity calculator"
+msgstr "Seite für den Stromrechner"
+
+#: admin/pages/settings_page.php:282
+msgid ""
+"Electricity tab will be linked to this page (if chosen redirect to page "
+"variant in \"Calculator tabs action\" option)"
+msgstr ""
+"Die Registerkarte Strom wird mit dieser Seite verlinkt (wenn Sie in der "
+"Option „Aktion Rechnerregisterkarten“ die Option Umleiten zur Seitenvariante "
+"gewählt haben)."
+
+#: admin/pages/settings_page.php:285
+msgid "Calculator tabs action"
+msgstr "Aktion der Tarifrechner-Tabs"
+
+#: admin/pages/settings_page.php:288
+msgid "Switch tabs"
+msgstr "Registerkarten wechseln"
+
+#: admin/pages/settings_page.php:289
+msgid "Redirect to page"
+msgstr "Weiterleiten auf Seite"
+
+#: admin/pages/settings_page.php:294
+msgid "Tariff second step settings"
+msgstr "Einstellungen des zweiten Schrittes"
+
+#: admin/pages/settings_page.php:296
+msgid "Page with tariffs"
+msgstr "Seite mit den Tarifen"
+
+#: admin/pages/settings_page.php:298
+msgid ""
+"Here you can choose a page where the user will be redirected after first "
+"step submission (by default this will be the same page where the calculator "
+"displayed)"
+msgstr ""
+"Hier können Sie eine Seite auswählen, auf der der Benutzer nach Abschluss "
+"des ersten Schrittes umgeleitet wird (standardmäßig ist dies die gleiche "
+"Seite, auf der auch der Rechner angezeigt wird)."
+
+#: admin/pages/settings_page.php:301
+msgid "Tariffs position"
+msgstr "Tarifposition"
+
+#: admin/pages/settings_page.php:304 admin/pages/settings_page.php:318
+#: admin/pages/settings_page.php:332
+msgid ""
+"Here you can choose this step data position on the page. *Note that if you "
+"have calculator shortcode on the page (calculator visual redactor element) "
+"the step data always will be displayed on its place."
+msgstr ""
+"Hier können Sie diesen Schritt Datenposition auf der Seite auswählen. "
+"*Beachten Sie, dass, wenn Sie eine Tarifrechner-Kurzwahl auf der Seite haben "
+"(visuelles Editor-Element des Tarifrechners), die Step-Daten immer an ihrer "
+"Stelle angezeigt werden."
+
+#: admin/pages/settings_page.php:308
+msgid "Tariff order step settings"
+msgstr "Einstellungen der Schritte zur Tarif-Bestellung"
+
+#: admin/pages/settings_page.php:310
+msgid "Page with order form"
+msgstr "Seite mit dem Bestellformular"
+
+#: admin/pages/settings_page.php:312
+msgid ""
+"Here you can choose a page where the user will be redirected after second "
+"step submission (by default this will be the same page where the second step "
+"data displayed)"
+msgstr ""
+"Hier können Sie eine Seite auswählen, auf der der Benutzer nach dem zweiten "
+"Schritt umgeleitet wird (standardmäßig ist dies die gleiche Seite, auf der "
+"die Daten des zweiten Schrittes angezeigt werden)."
+
+#: admin/pages/settings_page.php:315
+msgid "Order form position"
+msgstr "Position des Bestellformulars"
+
+#: admin/pages/settings_page.php:322
+msgid "Tariff result page settings"
+msgstr "Einstellungen der Tarifergebnisseite"
+
+#: admin/pages/settings_page.php:324
+msgid "Page with results"
+msgstr "Seite mit den Ergebnissen"
+
+#: admin/pages/settings_page.php:326
+msgid ""
+"Here you can choose a page where the user will be redirected after third "
+"step submission (by default this will be the same page where the third step "
+"data displayed)"
+msgstr ""
+"Hier können Sie eine Seite auswählen, auf der der Benutzer nach der "
+"Übermittlung im dritten Schritt umgeleitet wird (standardmäßig ist dies die "
+"gleiche Seite, auf der die Daten des dritten Schrittes angezeigt werden)."
+
+#: admin/pages/settings_page.php:329
+msgid "Results position"
+msgstr "Ergebnis-Position"
+
+#: admin/pages/settings_page.php:336
+msgid "Request form settings"
+msgstr "Einstellungen für das Antragsformular"
+
+#: admin/pages/settings_page.php:338
+msgid "Page with request form"
+msgstr "Seite mit Antragsformular"
+
+#: admin/pages/settings_page.php:340
+msgid "Tariffs whether unavailable to book will be linked to this page"
+msgstr ""
+"Wenn eine Buchung der Tarife nicht möglich ist, werden sie mit dieser Seite "
+"verknüpft"
+
+#: admin/pages/settings_page.php:341
+#, fuzzy
+#| msgid ""
+#| "Here you can choose a page where the user will be redirected if tariff is "
+#| "unavailable to online booking"
+msgid ""
+"Here you can choose a page where the user will be redirected if the tariff "
+"is unavailable for online booking"
+msgstr ""
+"Hier können Sie eine Seite auswählen, auf der der Benutzer umgeleitet wird, "
+"wenn der Tarif für die Online-Buchung nicht verfügbar ist"
+
+#: admin/pages/settings_page.php:350
+msgid "Order settings"
+msgstr "Bestellung"
+
+#: admin/pages/settings_page.php:355
+msgid "Use e-mail confirmation before order sending"
+msgstr "Verwenden Sie die E-Mail-Bestätigung vor dem Absenden der Bestellung"
+
+#: admin/pages/settings_page.php:359
+msgid "First legal checkbox text"
+msgstr ""
+
+#: admin/pages/settings_page.php:363
+msgid "Second legal checkbox text"
+msgstr ""
+
+#: admin/pages/settings_page.php:367
+msgid "Third legal checkbox text"
+msgstr ""
+
+#: admin/pages/settings_page.php:371
+msgid "Logo in the PDF file"
+msgstr ""
+
+#: admin/pages/settings_page.php:373
+msgid "This image will appear on the top of the PDF file"
+msgstr ""
+
+#: admin/pages/settings_page.php:376
+msgid "Additional text for PDF"
+msgstr "Text in Bestell-PDF"
+
+#: admin/pages/settings_page.php:378
+msgid ""
+"Here you can add any custom text (e.g. contacts information) which will "
+"appear in the PDF order"
+msgstr ""
+"Hier können Sie beliebigen Text (z.B. Kontaktinformationen) hinzufügen, der "
+"in der PDF-Bestellung erscheint"
+
+#: admin/pages/settings_page.php:387
+msgid "Google recaptcha settings"
+msgstr ""
+
+#: admin/pages/settings_page.php:392
+#, fuzzy
+#| msgid "Page with order form"
+msgid "Use re-captcha in order form"
+msgstr "Seite mit dem Bestellformular"
+
+#: admin/pages/settings_page.php:395
+msgid "Do not use google re-captcha"
+msgstr ""
+
+#: admin/pages/settings_page.php:396
+msgid "Use re-captcha V2"
+msgstr ""
+
+#: admin/pages/settings_page.php:397
+msgid "Use re-captcha V3"
+msgstr ""
+
+#: admin/pages/settings_page.php:401
+msgid "Re-captcha v2 public key"
+msgstr ""
+
+#: admin/pages/settings_page.php:405
+msgid "Re-captcha v2 private key"
+msgstr ""
+
+#: admin/pages/settings_page.php:409
+msgid "Re-captcha v3 public key"
+msgstr ""
+
+#: admin/pages/settings_page.php:413
+msgid "Re-captcha v3 private key"
+msgstr ""
+
+#: admin/pages/settings_page.php:417
+msgid "Hide re-captcha badge"
+msgstr ""
+
+#: admin/pages/settings_page.php:427
+msgid "Reset plugin"
+msgstr ""
+
+#: admin/pages/settings_page.php:432
+#, fuzzy
+#| msgid "Removed tariffs: "
+msgid "Remove all tariffs data"
+msgstr "Entfernte Tarife: "
+
+#: admin/pages/settings_page.php:436
+#, fuzzy
+#| msgid "Removed postcodes: "
+msgid "Remove all postal codes"
+msgstr "Postleitzahlen wurden entfernt: "
+
+#: admin/pages/settings_page.php:440
+msgid "Reset all orders"
+msgstr ""
+
+#: admin/pages/settings_page.php:444
+msgid "Reset settings to defaults"
+msgstr ""
+
+#: admin/pages/tariffs_page.php:29 admin/pages/tariffs_page.php:30
+msgid "Tariff has been succesfully processed"
+msgstr "Der Tarif wurde erfolgreich bearbeitet"
+
+#: admin/pages/tariffs_page.php:40
+msgid "Tariff was succesfully removed"
+msgstr "Der Tarif wurde erfolgreich entfernt"
+
+#: admin/pages/tariffs_page.php:42
+msgid "Tariff was succesfully removed."
+msgstr "Der Tarif wurde erfolgreich entfernt."
+
+#: admin/pages/tariffs_page.php:53 admin/pages/tariffs_page.php:55
+msgid "Removed tariffs: "
+msgstr "Entfernte Tarife: "
+
+#: admin/pages/tariffs_page.php:78 admin/pages/tariffs_page.php:79
+msgid "Tariffs has been succesfully imported."
+msgstr "Die Tarife wurden erfolgreich importiert."
+
+#: admin/pages/tariffs_page.php:86
+msgid "Add new"
+msgstr "Neu hinzufügen"
+
+#: admin/pages/tariffs_page.php:94
+msgid "Edit tariff - #"
+msgstr "Tarif bearbeiten - #"
+
+#: admin/pages/tariffs_page.php:114 admin/pages/tariffs_page.php:134
+#: admin/templates/postcodes.php:79 admin/templates/tariffs.php:55
+#: classes/edc_postcodes.class.php:116 front/templates/shortcode.php:9
+msgid "Electricity"
+msgstr "Strom"
+
+#: admin/pages/tariffs_page.php:132 admin/templates/tariffs.php:33
+#: admin/templates/tariffs_form.php:36
+msgid "Tariff type"
+msgstr "Tarif-Typ"
+
+#: admin/templates/custom_options.php:2
+msgid "There is no custom options"
+msgstr "Es gibt keine benutzerdefinierten Optionen"
+
+#: admin/templates/docs.php:6
+msgid "EDCalculator Examples"
+msgstr "Beispiele"
+
+#: admin/templates/docs.php:7
+msgid ""
+"On this page you can download examples how to use special functions of this "
+"plugin. E.g. importing tables."
+msgstr ""
+"Auf dieser Seite können Sie Beispiele herunterladen, wie Sie spezielle "
+"Funktionen dieses Plugins nutzen können. (z.B. Import von Tabellen)"
+
+#: admin/templates/docs.php:9
+msgid "Postcode importer Excel file"
+msgstr "Postleitzahlen-Importer Excel-Datei"
+
+#: admin/templates/docs.php:10
+msgid "Tariffs importer Excel file"
+msgstr "Tarifimporter Excel-Datei"
+
+#: admin/templates/fields/dropdown.php:2
+#: admin/templates/fields/pages_dropdown.php:2
+#: admin/templates/tariffs_form.php:39 admin/templates/tariffs_form.php:105
+#: admin/templates/tariffs_form.php:114 admin/templates/tariffs_form.php:128
+#: front/templates/tariffs_single.php:57 front/templates/tariffs_single.php:59
+msgid "Choose"
+msgstr "Wählen"
+
+#: admin/templates/fields/image.php:3 admin/templates/tariffs_form.php:22
+msgid "Attach image"
+msgstr "Bild anhängen"
+
+#: admin/templates/order_details.php:2 admin/templates/order_pdf.php:3
+msgid "from"
+msgstr "von"
+
+#: admin/templates/order_pdf.php:4
+msgid "Download"
+msgstr ""
+
+#: admin/templates/orders.php:11
+msgid "Search..."
+msgstr "Suchen..."
+
+#: admin/templates/orders.php:15
+msgid "Date from"
+msgstr "Datum von"
+
+#: admin/templates/orders.php:16
+msgid "Date to"
+msgstr "Datum bis"
+
+#: admin/templates/orders.php:20 admin/templates/postcodes.php:84
+#: admin/templates/settings.php:44 admin/templates/tariffs_form.php:151
+msgid "Submit"
+msgstr "Speichern"
+
+#: admin/templates/orders.php:25
+msgid "No orders have been made yet"
+msgstr "Es wurden noch keine Bestellungen getätigt"
+
+#: admin/templates/orders.php:37
+msgid "Tariff"
+msgstr "Tarif"
+
+#: admin/templates/orders.php:41
+msgid "Customer"
+msgstr "Kunde"
+
+#: admin/templates/orders.php:45 front/templates/tariffs_single.php:31
+msgid "Price per month"
+msgstr "Grundpreis / Monat"
+
+#: admin/templates/orders.php:49 admin/templates/tariffs_form.php:74
+msgid "Cent price per kWh"
+msgstr "Arbeitspreis (Cent / kWh)"
+
+#: admin/templates/orders.php:53 front/templates/tariffs_single.php:36
+msgid "Total price"
+msgstr "Gesamtpreis"
+
+#: admin/templates/orders.php:59
+msgid "Details"
+msgstr "Details"
+
+#: admin/templates/orders.php:60
+msgid "PDF"
+msgstr ""
+
+#: admin/templates/postcodes.php:6
+msgid "EDCalculator Postal Codes"
+msgstr "Postleitzahlen"
+
+#: admin/templates/postcodes.php:6
+msgid "Add new postcode"
+msgstr "Postleitzahl hinzufügen"
+
+#: admin/templates/postcodes.php:6
+msgid "Import postcodes list"
+msgstr "Postleitzahlen Liste importieren"
+
+#: admin/templates/postcodes.php:6
+msgid "Remove selected postcodes"
+msgstr "Entferne ausgewählte Postleitzahlen"
+
+#: admin/templates/postcodes.php:6
+msgid "Get selected postcodes for tariffs importer"
+msgstr "Ausgewählte Postleitzahlen für den Tarifimporter abrufen"
+
+#: admin/templates/postcodes.php:15 admin/templates/postcodes.php:32
+#: classes/edc_orders.class.php:243 classes/edc_orders.class.php:302
+#: classes/edc_orders.class.php:364 front/templates/order_form.php:61
+#: front/templates/order_form.php:153 front/templates/order_form.php:277
+#: front/templates/pdf.php:45 front/templates/pdf.php:82
+#: front/templates/shortcode.php:38 front/templates/shortcode.php:130
+msgid "Postal code"
+msgstr "Postleitzahl"
+
+#: admin/templates/postcodes.php:18 admin/templates/postcodes.php:33
+msgid "Postal place"
+msgstr "Ort"
+
+#: admin/templates/postcodes.php:21 admin/templates/tariffs.php:22
+msgid "Search"
+msgstr "Suche"
+
+#: admin/templates/postcodes.php:27
+msgid "No postal codes have been added yet"
+msgstr "Es wurden noch keine Postleitzahlen hinzugefügt"
+
+#: admin/templates/postcodes.php:34
+msgid "Postal code type"
+msgstr "Typ (Strom / Gas)"
+
+#: admin/templates/postcodes.php:44 admin/templates/tariffs.php:45
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: admin/templates/postcodes.php:47 admin/templates/tariffs.php:48
+msgid "Are you sure? This action can not be undone!"
+msgstr "Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden!"
+
+#: admin/templates/postcodes.php:47 admin/templates/tariffs.php:48
+msgid "Remove"
+msgstr "Entfernen"
+
+#: admin/templates/postcodes.php:62
+msgid "Add postcode"
+msgstr "Postleitzahl hinzufügen"
+
+#: admin/templates/postcodes.php:63
+msgid "Edit postcode"
+msgstr "PLZ bearbeiten"
+
+#: admin/templates/postcodes.php:66 classes/edc_orders.class.php:248
+#: classes/edc_orders.class.php:306 classes/edc_orders.class.php:369
+#: front/templates/order_form.php:68 front/templates/order_form.php:159
+#: front/templates/order_form.php:284 front/templates/pdf.php:49
+#: front/templates/pdf.php:86 front/templates/shortcode.php:45
+#: front/templates/shortcode.php:137
+msgid "Location"
+msgstr "Ort"
+
+#: admin/templates/postcodes.php:70 admin/templates/tariffs_form.php:45
+msgid "Code"
+msgstr "Postleitzahl"
+
+#: admin/templates/postcodes.php:74
+msgid "Type"
+msgstr "Typ"
+
+#: admin/templates/postcodes.php:77 classes/edc_postcodes.class.php:114
+msgid "Any"
+msgstr "Alle"
+
+#: admin/templates/settings.php:8
+msgid "Need help?"
+msgstr "Brauchen Sie Hilfe?"
+
+#: admin/templates/tariffs.php:6
+msgid "Add new tariff"
+msgstr "Tarif hinzufügen"
+
+#: admin/templates/tariffs.php:6
+msgid "Import tariffs list"
+msgstr "Tarifliste importieren"
+
+#: admin/templates/tariffs.php:6
+msgid "Remove selected tariffs"
+msgstr "Entferne gewählte Tarife"
+
+#: admin/templates/tariffs.php:16
+msgid "Keyword"
+msgstr "Suchbegriff"
+
+#: admin/templates/tariffs.php:27
+msgid "No tariffs have been added yet"
+msgstr "Es wurden noch keine Tarife hinzugefügt"
+
+#: admin/templates/tariffs.php:32 admin/templates/tariffs_form.php:32
+msgid "Title"
+msgstr "Titel"
+
+#: admin/templates/tariffs.php:34
+msgid "Prices"
+msgstr "Preise"
+
+#: admin/templates/tariffs.php:35
+msgid "Valid (from - to)"
+msgstr "Gültig (von - bis)"
+
+#: admin/templates/tariffs.php:60 front/templates/tariffs_single.php:26
+msgid "Price per year"
+msgstr "Preis / Jahr"
+
+#: admin/templates/tariffs.php:61
+msgid "Price per kwh"
+msgstr "Preis / kWh"
+
+#: admin/templates/tariffs_form.php:15
+msgid "Main information"
+msgstr ""
+
+#: admin/templates/tariffs_form.php:19
+msgid "Image"
+msgstr "Bild"
+
+#: admin/templates/tariffs_form.php:29
+msgid "Tariff active"
+msgstr "Tarif aktiv"
+
+#: admin/templates/tariffs_form.php:50
+msgid "Valid from"
+msgstr "Tarif gültig von"
+
+#: admin/templates/tariffs_form.php:50
+msgid "after"
+msgstr "nach"
+
+#: admin/templates/tariffs_form.php:51
+msgid "Valid to"
+msgstr "Tarif gültig bis"
+
+#: admin/templates/tariffs_form.php:51
+msgid "until"
+msgstr "bis"
+
+#: admin/templates/tariffs_form.php:58
+msgid "Sale information"
+msgstr ""
+
+#: admin/templates/tariffs_form.php:61
+#, fuzzy
+#| msgid "Price per year"
+msgid "Price per period"
+msgstr "Preis / Jahr"
+
+#: admin/templates/tariffs_form.php:65 classes/edc_tariffs.class.php:306
+#, fuzzy
+#| msgid "Notice period"
+msgid "Price period"
+msgstr "Kündigungsfrist"
+
+#: admin/templates/tariffs_form.php:68 classes/edc_tariffs.class.php:309
+#, fuzzy
+#| msgid "Price per month"
+msgid "Per month"
+msgstr "Grundpreis / Monat"
+
+#: admin/templates/tariffs_form.php:69 classes/edc_tariffs.class.php:310
+#, fuzzy
+#| msgid "Price per year"
+msgid "Per year"
+msgstr "Preis / Jahr"
+
+#: admin/templates/tariffs_form.php:78 classes/edc_tariffs.class.php:317
+#, fuzzy
+#| msgid "EDCalculator"
+msgid "Calculation formula"
+msgstr "Tarifrechner"
+
+#: admin/templates/tariffs_form.php:81 classes/edc_tariffs.class.php:320
+#, fuzzy
+#| msgid "Base price"
+msgid "Static base price"
+msgstr "Grundpreis"
+
+#: admin/templates/tariffs_form.php:82 classes/edc_tariffs.class.php:321
+#, fuzzy
+#| msgid "Base price"
+msgid "Dynamic base price"
+msgstr "Grundpreis"
+
+#: admin/templates/tariffs_form.php:99
+#, fuzzy
+#| msgid "Postal code"
+msgid "Postal codes"
+msgstr "Postleitzahl"
+
+#: admin/templates/tariffs_form.php:102
+#, fuzzy
+#| msgid "Add new postcode"
+msgid "Included in postcodes"
+msgstr "Postleitzahl hinzufügen"
+
+#: admin/templates/tariffs_form.php:111
+#, fuzzy
+#| msgid "Edit postcode"
+msgid "Excluded in postcodes"
+msgstr "PLZ bearbeiten"
+
+#: admin/templates/tariffs_form.php:122
+msgid "Parameters"
+msgstr ""
+
+#: admin/templates/tariffs_form.php:125
+msgid "Legal terms"
+msgstr "Rechtliche Hinweise"
+
+#: admin/templates/tariffs_form.php:134
+msgid "Attached documents in E-Mail"
+msgstr "Angehängte Dokumente in der Bestell-Email"
+
+#: admin/templates/tariffs_form.php:137
+msgid "Attach file"
+msgstr "Datei anhängen"
+
+#: admin/templates/tariffs_form.php:145
+msgid "Custom options"
+msgstr "Benutzerdefinierte Optionen"
+
+#: classes/edc_orders.class.php:21
+msgid "Order"
+msgstr "Bestellung"
+
+#: classes/edc_orders.class.php:146
+msgid "Summary of your order in the attached PDF file."
+msgstr "Zusammenfassung Ihrer Bestellung in der beigefügten PDF-Datei."
+
+#: classes/edc_orders.class.php:169
+#, fuzzy, php-format
+#| msgid "Use NDS on the site"
+msgid "New order on the site %s"
+msgstr "NDS auf der Website verwenden"
+
+#: classes/edc_orders.class.php:183 classes/edc_orders.class.php:212
+#: classes/edc_orders.class.php:338 front/templates/order_form.php:28
+#: front/templates/order_form.php:237
+msgid "Man"
+msgstr "Herr"
+
+#: classes/edc_orders.class.php:183 classes/edc_orders.class.php:213
+#: classes/edc_orders.class.php:339 front/templates/order_form.php:29
+#: front/templates/order_form.php:238
+msgid "Woman"
+msgstr "Frau"
+
+#: classes/edc_orders.class.php:206
+msgid "Main order fields"
+msgstr "Hauptfelder der Bestellung"
+
+#: classes/edc_orders.class.php:209 classes/edc_orders.class.php:335
+#: front/templates/order_form.php:25 front/templates/order_form.php:234
+msgid "Gender"
+msgstr "Anrede"
+
+#: classes/edc_orders.class.php:218 classes/edc_orders.class.php:344
+#: front/templates/order_form.php:9 front/templates/order_form.php:245
+msgid "Name"
+msgstr "Vorname"
+
+#: classes/edc_orders.class.php:223 classes/edc_orders.class.php:349
+#: front/templates/order_form.php:16 front/templates/order_form.php:252
+msgid "Last name"
+msgstr "Nachname"
+
+#: classes/edc_orders.class.php:228 front/templates/order_form.php:36
+msgid "Birth date"
+msgstr "Geburtsdatum"
+
+#: classes/edc_orders.class.php:233 classes/edc_orders.class.php:294
+#: classes/edc_orders.class.php:354 front/templates/order_form.php:45
+#: front/templates/order_form.php:138 front/templates/order_form.php:261
+msgid "Street"
+msgstr "Straße"
+
+#: classes/edc_orders.class.php:238 classes/edc_orders.class.php:359
+msgid "House"
+msgstr "Haus"
+
+#: classes/edc_orders.class.php:253 front/templates/order_form.php:78
+#: front/templates/pdf.php:92
+msgid "Phone"
+msgstr "Telefon"
+
+#: classes/edc_orders.class.php:257 front/templates/order_form.php:84
+#: front/templates/pdf.php:55
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: classes/edc_orders.class.php:273
+msgid "Sepa and transfer fields"
+msgstr "SEPA- und Überweisungsfelder"
+
+#: classes/edc_orders.class.php:276 front/templates/order_form.php:104
+#: front/templates/pdf.php:110
+msgid "SEPA direct debit mandate"
+msgstr "SEPA-Lastschriftmandat"
+
+#: classes/edc_orders.class.php:281 front/templates/order_form.php:111
+#: front/templates/pdf.php:101
+msgid "Transfer"
+msgstr "Überweisung"
+
+#: classes/edc_orders.class.php:286 front/templates/order_form.php:116
+msgid "Desired start of delivery / on entry: Date of key transfer"
+msgstr "Gewünschter Lieferbeginn / bei Einzug: Datum der Schlüsselübergabe"
+
+#: classes/edc_orders.class.php:290 front/templates/order_form.php:129
+msgid "Account holder (first name / surname)"
+msgstr "Kontoinhaber (Vorname / Nachname)"
+
+#: classes/edc_orders.class.php:298 front/templates/order_form.php:52
+#: front/templates/order_form.php:144 front/templates/order_form.php:268
+msgid "House number"
+msgstr "Hausnummer"
+
+#: classes/edc_orders.class.php:310 front/templates/order_form.php:168
+msgid "Bank"
+msgstr "Bank"
+
+#: classes/edc_orders.class.php:314 front/templates/order_form.php:177
+#: front/templates/pdf.php:127
+msgid "IBAN"
+msgstr "IBAN"
+
+#: classes/edc_orders.class.php:318 front/templates/order_form.php:206
+#: front/templates/pdf.php:143
+msgid "BIC"
+msgstr "BIC"
+
+#: classes/edc_orders.class.php:327 classes/edc_orders.class.php:330
+#: front/templates/order_form.php:227
+msgid "Different billing address"
+msgstr "Abweichende Rechnungsadresse"
+
+#: classes/edc_orders.class.php:379 front/templates/order_form.php:293
+#: front/templates/pdf.php:152
+msgid "Information on current supply and meter reading"
+msgstr "Informationen zur Stromversorgung und Zählerstand"
+
+#: classes/edc_orders.class.php:382 front/templates/pdf.php:162
+msgid "Current supplier"
+msgstr "Derzeitiger Lieferant"
+
+#: classes/edc_orders.class.php:386 front/templates/order_form.php:306
+msgid "Customer or contract account number"
+msgstr "Kunden- oder Vertragskontonummer"
+
+#: classes/edc_orders.class.php:390 front/templates/order_form.php:312
+msgid "Meter reading"
+msgstr "Zählerstand"
+
+#: classes/edc_orders.class.php:394 front/templates/order_form.php:321
+#: front/templates/pdf.php:175
+msgid "Counter number"
+msgstr "Zählernummer"
+
+#: classes/edc_orders.class.php:399 front/templates/order_form.php:328
+msgid "Previous year consumption (kWh)"
+msgstr "Verbrauch des Vorjahres (kWh)"
+
+#: classes/edc_orders.class.php:403 front/templates/order_form.php:336
+msgid "Date of meter reading / on collection: Date of key collection"
+msgstr ""
+"Datum der Zählerablesung / bei der Abholung: Datum der Schlüsselübergabe"
+
+#: classes/edc_tariffs.class.php:241
+msgid "Subtitle"
+msgstr "Tarif-Untertitel"
+
+#: classes/edc_tariffs.class.php:247
+msgid "Tariff bookable online"
+msgstr "Tarif online buchbar?"
+
+#: classes/edc_tariffs.class.php:253
+msgid "Tariff no book link"
+msgstr "Link - Tarif nicht buchbar"
+
+#: classes/edc_tariffs.class.php:254
+msgid ""
+"If you will leave this option empty, then will be used global setting "
+"\"Request form settings\""
+msgstr ""
+
+#: classes/edc_tariffs.class.php:259 classes/edc_tariffs.class.php:274
+msgid "Min. power"
+msgstr "Min. Leistung"
+
+#: classes/edc_tariffs.class.php:265 classes/edc_tariffs.class.php:280
+msgid "Max. power"
+msgstr "Max. Leistung"
+
+#: classes/edc_tariffs.class.php:290
+msgid "Description"
+msgstr "Bescheibung"
+
+#: classes/edc_tariffs.class.php:295
+msgid "For clients"
+msgstr "Für welchen Kunden?"
+
+#: classes/edc_tariffs.class.php:298
+msgid "Private"
+msgstr "Privat"
+
+#: classes/edc_tariffs.class.php:299
+msgid "Business"
+msgstr "Geschäftlich"
+
+#: edc.class.php:87 front/templates/shortcode.php:48
+#: front/templates/shortcode.php:140
+msgid "Choose location"
+msgstr "Bitte wählen"
+
+#: edc.class.php:120
+msgid "Please complete all required fields."
+msgstr "Bitte füllen Sie alle Pflichtfelder aus."
+
+#: edc.class.php:121
+msgid "We have not this postal code in our database."
+msgstr "Wir haben diese Postleitzahl nicht in unserer Datenbank."
+
+#: edc.class.php:123
+msgid "Sorry but we have not any tariffs for your parameters"
+msgstr ""
+
+#: edc.class.php:181
+msgid "You must to prove that you are not a robot"
+msgstr ""
+
+#: edc.class.php:189
+#, php-format
+msgid "The next field has incorrect value: %s"
+msgstr "Das folgende Feld hat einen fehlerhaften Wert: %s"
+
+#: edc.class.php:202 edc.class.php:279 front/templates/order_form.php:397
+msgid "The confirmation code is not correct"
+msgstr ""
+
+#: edc.class.php:248
+msgid ""
+"To successfully authenticate, please enter the code below in the required "
+"field and click on \"Confirm\". With best regards."
+msgstr ""
+
+#: edc.class.php:250
+#, fuzzy, php-format
+#| msgid "Your postal code: %s"
+msgid "Your confirmation code: %s"
+msgstr "Ihre Postleitzahl: %s"
+
+#: edc.class.php:267
+#, php-format
+msgid "Confirmation code from site %s"
+msgstr ""
+
+#: edc.class.php:275
+msgid "The code is not correct"
+msgstr ""
+
+#: front/templates/edc_steps_data.php:8
+#, fuzzy, php-format
+#| msgid "Your postal code: %s"
+msgid "Your location: %s (%s)"
+msgstr "Ihre Postleitzahl: %s"
+
+#: front/templates/edc_steps_data.php:9
+#, php-format
+msgid "Your annual consumption: %s kWh"
+msgstr "Ihr Jahresverbrauch: %s kWh"
+
+#: front/templates/edc_steps_data.php:11
+#, fuzzy, php-format
+#| msgid "Removed tariffs: "
+msgid "Chosen tariff: %s"
+msgstr "Entfernte Tarife: "
+
+#: front/templates/order_form.php:6
+msgid "Fields marked with * are required"
+msgstr "Die mit * markierten Felder müssen ausgefüllt werden"
+
+#: front/templates/order_form.php:12 front/templates/order_form.php:248
+msgid "Enter your name"
+msgstr "Vornamen eingeben"
+
+#: front/templates/order_form.php:19 front/templates/order_form.php:255
+msgid "Enter your last name"
+msgstr "Nachnamen eingeben"
+
+#: front/templates/order_form.php:32 front/templates/order_form.php:241
+msgid "Choose you gender"
+msgstr "Anrede auswählen"
+
+#: front/templates/order_form.php:39
+msgid "Choose your birth date"
+msgstr "Geburtsdatum auswählen"
+
+#: front/templates/order_form.php:48 front/templates/order_form.php:264
+msgid "Enter your street"
+msgstr "Adresse eingeben"
+
+#: front/templates/order_form.php:55 front/templates/order_form.php:271
+msgid "Enter your house"
+msgstr "Geben Sie ihre Hausnummer ein"
+
+#: front/templates/order_form.php:64 front/templates/order_form.php:280
+msgid "Enter postal code"
+msgstr "Postleitzahl eingeben"
+
+#: front/templates/order_form.php:71 front/templates/order_form.php:287
+msgid "Enter location"
+msgstr "Ort eingeben"
+
+#: front/templates/order_form.php:87
+msgid "Enter e-mail"
+msgstr "E-Mail eingeben"
+
+#: front/templates/order_form.php:91
+msgid "E-mail confirmation"
+msgstr ""
+
+#: front/templates/order_form.php:94
+msgid "Confirm e-mail"
+msgstr "E-Mail bestätigen"
+
+#: front/templates/order_form.php:112
+msgid "Required field"
+msgstr "Pflichtfeld"
+
+#: front/templates/order_form.php:297
+msgid "Current supplier (only required when changing supplier)"
+msgstr "Aktueller Lieferant (nur bei Lieferantenwechsel erforderlich)"
+
+#: front/templates/order_form.php:324
+msgid "Enter counter number"
+msgstr "Zählernummer eingeben"
+
+#: front/templates/order_form.php:347 front/templates/order_form.php:356
+#: front/templates/order_form.php:365 front/templates/shortcode.php:50
+#: front/templates/shortcode.php:142
+msgid "This field required"
+msgstr "Dieses Feld ist Pflichtfeld"
+
+#: front/templates/order_form.php:371
+msgid "Send order"
+msgstr "Bestellung senden"
+
+#: front/templates/order_form.php:392
+msgid ""
+"The code has been sent to your e-mail address. If you did not get it, please "
+"check spam folder or try to re-send code."
+msgstr ""
+
+#: front/templates/order_form.php:394
+msgid "Confirmation code"
+msgstr ""
+
+#: front/templates/order_form.php:400
+msgid "Click"
+msgstr ""
+
+#: front/templates/order_form.php:400
+msgid "Send confirmation code again"
+msgstr ""
+
+#: front/templates/order_form.php:402
+#, fuzzy
+#| msgid "Confirm e-mail"
+msgid "Confirm"
+msgstr "E-Mail bestätigen"
+
+#: front/templates/pdf.php:19
+msgid "Order from"
+msgstr "Bestellung von"
+
+#: front/templates/pdf.php:25
+msgid "Customer / Delivery address"
+msgstr "Kunde / Lieferadresse"
+
+#: front/templates/pdf.php:30 front/templates/pdf.php:67
+msgid "Name and second name"
+msgstr "Vorname und Nachname"
+
+#: front/templates/pdf.php:38
+msgid "Address (Street,Housenumber"
+msgstr "Adresse (Straße, Hausnummer)"
+
+#: front/templates/pdf.php:61
+msgid "Billing address, if different from delivery address"
+msgstr "Rechnungsadresse, falls abweichend von der Lieferadresse"
+
+#: front/templates/pdf.php:75
+msgid "Address (Street, Housenumber)"
+msgstr "Adresse (Straße, Hausnummer)"
+
+#: front/templates/pdf.php:120
+msgid "Account owner"
+msgstr "Kontoinhaber"
+
+#: front/templates/pdf.php:136
+msgid "Credit institution"
+msgstr "Kreditinstitut"
+
+#: front/templates/pdf.php:168
+msgid "Customer or Contract Account Number"
+msgstr "Kunden- oder Vertragskontonummer"
+
+#: front/templates/pdf.php:178
+msgid "in kWh"
+msgstr "in kWh"
+
+#: front/templates/pdf.php:180
+msgid "last year's consumption"
+msgstr "Verbrauch des Vorjahres"
+
+#: front/templates/pdf.php:187
+msgid "meter reading"
+msgstr "Zählerstand"
+
+#: front/templates/pdf.php:192
+msgid "date of Meter reading"
+msgstr "Datum der Zählerablesung"
+
+#: front/templates/pdf.php:199
+msgid "Price and delivery start"
+msgstr "Preis und Lieferbeginn"
+
+#: front/templates/pdf.php:202
+#, fuzzy
+#| msgid "Base Price"
+msgid "Base Order Price"
+msgstr "Grundpreis"
+
+#: front/templates/pdf.php:202
+msgid "EUR / month"
+msgstr ""
+
+#: front/templates/pdf.php:205
+#, fuzzy
+#| msgid "Work price"
+msgid "Working Order Price"
+msgstr "Arbeitspreis"
+
+#: front/templates/pdf.php:205
+msgid "ct / kWh"
+msgstr "ct / kWh"
+
+#: front/templates/pdf.php:208
+msgid "The delivery start you want is the"
+msgstr "Der von Ihnen gewünschte Lieferbeginn ist der"
+
+#: front/templates/pdf.php:208
+msgid "Next possible appointment"
+msgstr ""
+
+#: front/templates/shortcode.php:36 front/templates/shortcode.php:128
+#, fuzzy
+#| msgid "Adresse"
+msgid "Address"
+msgstr "Postleitzahl"
+
+#: front/templates/shortcode.php:39 front/templates/shortcode.php:61
+#: front/templates/shortcode.php:131 front/templates/shortcode.php:153
+msgid "Must be a number"
+msgstr "Muss eine Zahl sein"
+
+#: front/templates/shortcode.php:58 front/templates/shortcode.php:150
+msgid "Annual consumption"
+msgstr "Ihr Jahresverbrauch (siehe letzte Abrechnung)"
+
+#: front/templates/shortcode.php:96
+msgid "Calculate gas price"
+msgstr "Gaspreis berechnen"
+
+#: front/templates/shortcode.php:188
+msgid "Calculate electricity price"
+msgstr "Jetzt berechnen"
+
+#: front/templates/tariffs_single.php:21
+msgid "Work price"
+msgstr "Arbeitspreis"
+
+#: front/templates/tariffs_single.php:22
+#, fuzzy
+#| msgid "ct / kWh"
+msgid "cent / kwh"
+msgstr "ct / kWh"
+
+#: front/templates/tariffs_single.php:46
+msgid "Price Guarantee"
+msgstr "Preisgarantie"
+
+#: inc/activate.class.php:7
+msgid "While activation an error occured with creating database structure"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://tarifrechner.ivato.de"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Das WordPress Tarifrechner Plugin für Stadtwerke und Versorger"
+msgstr ""
+
+#. Author of the plugin/theme
+#, fuzzy
+#| msgid "Private"
+msgid "ivato.de"
+msgstr "Privat"
+
+#~ msgid "An error occured, please try again later."
+#~ msgstr ""
+#~ "Ein Fehler ist aufgetreten, bitte versuchen Sie es später noch einmal."
+
+#~ msgid "Error occured. Please try again later."
+#~ msgstr ""
+#~ "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal."
+
+#~ msgid "GVV link"
+#~ msgstr "GVV Link"
+
+#~ msgid "Mail subject"
+#~ msgstr "E-Mail Betreff"
+
+#~ msgid "Mail text"
+#~ msgstr "E-Mail Text"
+
+#~ msgid "Delivery price"
+#~ msgstr "Lieferpreis"
+
+#~ msgid "Postcodes"
+#~ msgstr "Postleitzahlen"
+
+#~ msgid "Delivery price (per month)"
+#~ msgstr "Lieferpreis / Monat"
+
+#~ msgid "Linked tariff"
+#~ msgstr "Tarif Verknüpfen"
+
+#~ msgid "Work term"
+#~ msgstr "Laufzeit"
+
+#~ msgid "Monthly cost"
+#~ msgstr "Monatliche Kosten"
+
+#~ msgid "Error occured, please try again later"
+#~ msgstr ""
+#~ "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal"
+
+#~ msgid "Your postal code: %s"
+#~ msgstr "Ihre Postleitzahl: %s"
+
+#~ msgid "E-mail wiederholen"
+#~ msgstr "E-Mail wiederholen"
+
+#~ msgid "Running time"
+#~ msgstr "Laufzeit"
+
+#~ msgid "Monthly costs"
+#~ msgstr "Monatliche Kosten"
+
+#~ msgid "EUR / year"
+#~ msgstr "EUR / Jahr"
