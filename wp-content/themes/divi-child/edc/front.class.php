@@ -109,7 +109,7 @@ class EDC_Extension extends EDC{
 		}else{
 			if($data['consumption']==''){ $res=false; }
 		}
-		if
+		if(!date["type_of_change"]) $res=false;
 		
 		if(!$res) return $this->ajaxResult('error',__('Please complete all required fields.','edc'));
 		
