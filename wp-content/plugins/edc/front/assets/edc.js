@@ -259,6 +259,7 @@ EDC.prototype.submit=function(el,params){
 		el.addEventListener('click',function(ev){ ev.preventDefault(); });
 		let fd = new FormData(f);
 		for(let i=0;i<f.length;++i) if(f[i].disabled) fd.append(f[i].name,f[i].value);
+		console.log(fd);
 		(function(obj){
 			$.ajax({
 				url: window.location,

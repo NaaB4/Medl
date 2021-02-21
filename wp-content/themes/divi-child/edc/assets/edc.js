@@ -566,11 +566,9 @@
 		let age=this.calculateAge(birth);
 		if(!age || age<18){ this.setNotValid(f['birthdate']); resfalse; }
 		if(f['type'].value=='gas'){
-			if(f['square'].value==''){ this.setNotValid(f['square']); res=false; }
 		}else if(f['type'].value=='strom'){
 			if(f['consumption'].value==''){ this.setNotValid(f['consumption']); res=false; }		
 		}else{
-			if(f['square'].value==''){ this.setNotValid(f['square']); res=false; }
 			if(f['consumption'].value==''){ this.setNotValid(f['consumption']); res=false; }			
 		}
 		return res;
@@ -585,16 +583,12 @@
 	}
 	edcp.popupTariffChanged=function(el){
 		if(!el) return false;
-		let cont1=document.body.querySelector('#edc_popup_square');
 		let cont2=document.body.querySelector('#edc_popup_consumption');
 		if(el.value=='gas'){
-			cont1.style.display='block';
 			cont2.style.display='none';
 		}else if(el.value=='strom'){
-			cont1.style.display='none';
 			cont2.style.display='block';			
 		}else{
-			cont1.style.display='block';
 			cont2.style.display='block';
 			
 		}

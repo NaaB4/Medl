@@ -217,7 +217,7 @@ body .edc .edc_tabs.landing.theme_combi:not(.full) ul.navigation li[data-class="
 body .edc .edc_checkbox .fieldset{ margin: 10px 0; }
 
 body .edc_popup .form_row{ margin-bottom: 15px; }
-body .edc_popup .field input[type="text"]{ width: 100%; }
+body .edc_popup .field input[type="text"], body .edc_popup .field select{ width: 100%; }
 body .edc_popup .field{ position: relative; transition: padding ease-in 0.3s; }
 body .edc_popup .field .required_text{ display: none; position: absolute; top: 0; right: 0; padding: 3px 7px; font-size: 12px; color: #fff; background: #a00; max-width: 100%; overflow: hidden; white-space: nowrap; transition: height ease-in 0.3s; height: 0; align-items: center; }
 /*.edc form .col_2.required .label .field,.edc form .label .field.required{ padding-top: 25px; }*/

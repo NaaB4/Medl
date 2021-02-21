@@ -27,7 +27,7 @@ if(isset($_GET['debug'])){
 			die();
 	},50);
 }*/
-define( 'WP_DEBUG', true );
+
 function my_theme_enqueue_styles() {
 
     $parent_style = 'divi-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
@@ -251,10 +251,12 @@ function updateEdsPostcodes() {
     $row = $wpdb->get_results(  "SELECT COLUMN_NAME FROM wp_edc_postcodes.COLUMNS
 WHERE table_name = 'street_list'"  );
 
-    if(empty($row)){
+    if(empty($rencodeWordsow)){
         $wpdb->query("ALTER TABLE `wp_edc_postcodes` ADD `street_list` LONGTEXT NULL AFTER `type`;");
     }
 }
 updateEdsPostcodes();
+
+add_filter('widget_text', 'do_shortcode');
 
 ?>

@@ -99,17 +99,17 @@ class EDC_Extension extends EDC{
 	}
 	protected function sendPopupForm($data=[]){
 		EDCH::trimArray($data);
-		$fields=['name','email','phone','birthdate','street_and_house','plz_and_ort','type'];
+		$fields=['name','email','phone','birthdate','street_and_house','plz_and_ort','type', 'type_of_change'];
 		$res=true;
 		foreach($fields as $f) if(!isset($data[$f]) || $data[$f]==''){ $res=false; break; }
 		
 		if($data['type']=='gas'){
-			if($data['square']==''){ $res=false; }
 		}else if($data['type']=='strom'){
 			if($data['consumption']==''){ $res=false; }		
 		}else{
-			if($data['square']=='' || $data['consumption']==''){ $res=false; }
+			if($data['consumption']==''){ $res=false; }
 		}
+		if
 		
 		if(!$res) return $this->ajaxResult('error',__('Please complete all required fields.','edc'));
 		
@@ -127,7 +127,7 @@ class EDC_Extension extends EDC{
 			'plz_and_ort'=>'PLZ & Ort',
 			'product'=>'Gewünschtes Produkt',
 			'type'=>'Type',
-			'square'=>'Wohnfläche (ca.) in m²',
+            'type_of_change'=>'Art des Wechsels',
 			'consumption'=>'Verbrauch in kWh',
 		];
 		

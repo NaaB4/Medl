@@ -126,8 +126,6 @@ function EDC(){
 		//wp-editor-area
 		//tinyMCE.getContent
 		var obj=this;
-		console.log(fd);
-		return;
 		$.ajax({
 			url: window.location,
 			type: 'post',

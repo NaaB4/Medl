@@ -68,9 +68,12 @@
 					</div>
 					<div id="edc_popup_square">
 						<div class="form_row">
-							<div class="label">Wohnfläche (ca.) in m² <span class="red">*</span></div>
+							<div class="label">Art des Wechsels <span class="red">*</span></div>
 							<div class="field to_top">
-								<input type="text" name="square">
+								<select name="type_of_change">
+                                    <option value="Neueinzug">Neueinzug</option>
+                                    <option value="Lieferantenwechsel">Lieferantenwechsel</option>
+                                </select>
 									<div class="required_text">Dieses Feld ist Pflichtfeld</div>
 							</div>
 						</div>
