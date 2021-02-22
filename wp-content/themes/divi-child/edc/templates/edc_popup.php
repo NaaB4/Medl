@@ -28,7 +28,7 @@
 					<div class="form_row">
 						<div class="label">Telefonnummer <span class="red">*</span></div>
 						<div class="field to_top">
-							<input type="text" name="phone" data-required="1">
+							<input type="text" class="only_numeric" name="phone" data-required="1">
 							<div class="required_text">Dieses Feld ist Pflichtfeld</div>
 						</div>
 					</div>

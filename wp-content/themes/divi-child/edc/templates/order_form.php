@@ -91,14 +91,14 @@
 						<div class="col_1_6">
 							<div class="name"><?=__('Vorwahl','medl')?> <span class="red">*</span>:</div>
 							<div class="field">
-								<input type="text" name="edc_phone1" value="" data-required="1">
+								<input type="text" class="only_numeric" name="edc_phone1" value="" data-required="1">
 								<div class="required_text"><?=__('Required field','edc')?></div>
 							</div>
 						</div>
 						<div class="col_1_6">
 							<div class="name"><?=__('Hauptnummer','medl')?> <span class="red">*</span>:</div>
 							<div class="field">
-								<input type="text" name="edc_phone2" value="" data-required="1">
+								<input type="text" class="only_numeric" name="edc_phone2" value="" data-required="1">
 								<div class="required_text"><?=__('Required field','edc')?></div>
 							</div>
 						</div>
