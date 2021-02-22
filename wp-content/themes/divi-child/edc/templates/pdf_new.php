@@ -91,13 +91,15 @@
 			<table>
 				<tr class="bbottom bgray row small">
 					<td class="row_cell left_cell2"><span><?=$data['options']['edc_street'].' '.$data['options']['edc_house']?></span></td>
+                    <td class="row_cell left_cell2"><span><?=$data['options']['edc_house_zuratc']?></span></td>
 					<td class="row_cell center_cell2"><span><?=$data['options']['edc_postal_code']?></span></td>
 					<td class="row_cell right_cell2"><span><?=$data['options']['edc_location']?></span></td>
 				</tr>
 			</table>
 			<table>
 				<tr class="bbottom bgray row small smallfs">
-					<td class="row_cell left_cell2"><span>Straße Hausnummer</span></td>
+                    <td class="row_cell left_cell2"><span>Straße Hausnummer</span></td>
+                    <td class="row_cell left_cell2"><span>Hausnummerzusatz</span></td>
 					<td class="row_cell center_cell2"><span>PLZ</span></td>
 					<td class="row_cell right_cell2"><span>Ort</span></td>
 				</tr>
@@ -121,14 +123,16 @@
 			</div>
 			<table>
 				<tr class="bbottom bgray row small">
-					<td class="row_cell left_cell2"><span><?=$data['options']['edc_street'].' '.$data['options']['edc_house']?></span></td>
+                    <td class="row_cell left_cell2"><span><?=$data['options']['edc_street'].' '.$data['options']['edc_house']?></span></td>
+                    <td class="row_cell left_cell2"><span><?=$data['options']['change_house_zuratc']?></span></td>
 					<td class="row_cell center_cell2"><span><?=$data['options']['edc_postal_code']?></span></td>
 					<td class="row_cell right_cell2"><span><?=$data['options']['edc_location']?></span></td>
 				</tr>
 			</table>
 			<table>
 				<tr class="bbottom bgray row small">
-					<td class="row_cell left_cell2"><span>Straße Hausnummer</span></td>
+                    <td class="row_cell left_cell2"><span>Straße Hausnummer</span></td>
+                    <td class="row_cell left_cell2"><span>Hausnummerzusatz</span></td>
 					<td class="row_cell center_cell2"><span>PLZ</span></td>
 					<td class="row_cell right_cell2"><span>Ort</span></td>
 				</tr>

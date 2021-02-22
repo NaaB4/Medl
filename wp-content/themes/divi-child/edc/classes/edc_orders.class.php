@@ -220,14 +220,16 @@ class EDC_ORDERS extends EDCH{
 				'Anrede:'=>'edc_anrede',
 				'Name:'=>'edc_name',
 				'Vorname:'=>'edc_first_name',
-				'Straße, Hausnummer:'=>'edc_street_edc_house',
+                'Straße, Hausnummer:'=>'edc_street_edc_house',
+                'Hausnummerzusatz:'=>'edc_house_zuratc',
 				'PLZ, Stadt:'=>'edc_postal_code_edc_location',
 				'Telefonnummer:'=>'edc_phone',
 				'E-Mail Adresse:'=>'edc_email',
 				'Geburtsdatum:'=>'edc_date_of_birth',
 			],
 			'Alte Adresse'=>[
-				'Straße, Hausnummer:'=>'change_street_change_house',
+                'Straße, Hausnummer:'=>'change_street_change_house',
+                'Hausnummerzusatz:'=>'change_house_zuratc',
 				'PLZ, Stadt:'=>'change_postal_code_change_location',				
 			],
 			'Lieferdaten'=>[
@@ -441,11 +443,15 @@ class EDC_ORDERS extends EDCH{
 					'required'=>true,
 					'field'=>'option',
 				),
-				'edc_house'=>array(
-					'name'=>__('House','edc'),
-					'required'=>true,
-					'field'=>'option',
-				),
+                'edc_house'=>array(
+                    'name'=>__('House','edc'),
+                    'required'=>true,
+                    'field'=>'option',
+                ),
+                'edc_house_zuratc'=>array(
+                    'name'=>__('Hausnummerzusatz','edc'),
+                    'field'=>'option',
+                ),
 				'edc_postal_code'=>array(
 					'name'=>__('Postal code','edc'),
 					'required'=>true,
@@ -644,6 +650,7 @@ class EDC_ORDERS extends EDCH{
 			'Geburtsdatum'=>'edc_date_of_birth',
 			'Alt Strasse'=>'change_street',
 			'Alt Hausnummer'=>'change_house',
+            'Alt Hausnummerzusatz' => 'change_house_zuratc',
 			'Alt PLZ'=>'change_postal_code',
 			'Alt Stadt'=>'change_location',
 			'Art des Wechsels'=>'change',

@@ -352,7 +352,7 @@
 								<div class="col_1_4">
 									<div class="name"><?=__('Hausnummerzusatz','medl')?>:</div>
 									<div class="field">
-										<input type="text" name="change_house_zurats" value="" maxlength="3">
+										<input type="text" name="change_house_zuratc" value="" maxlength="3">
 									</div>
 								</div>
 							</div>

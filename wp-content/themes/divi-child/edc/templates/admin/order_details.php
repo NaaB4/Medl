@@ -9,6 +9,7 @@
 				'Name:'=>'edc_name',
 				'Vorname:'=>'edc_first_name',
 				'Straße, Hausnummer:'=>'edc_street_edc_house',
+                'Hausnummerzusatz:'=>'edc_house_zuratc',
 				'PLZ, Stadt:'=>'edc_postal_code_edc_location',
 				'Telefonnummer:'=>'edc_phone',
 				'E-Mail Adresse:'=>'edc_email',
@@ -16,6 +17,7 @@
 			],
 			'Alte Adresse'=>[
 				'Straße, Hausnummer:'=>'change_street_change_house',
+                'Hausnummerzusatz:'=>'change_house_zuratc',
 				'PLZ, Stadt:'=>'change_postal_code_change_location',				
 			],
 			'Lieferdaten'=>[

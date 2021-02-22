@@ -122,10 +122,14 @@ new class() {
 					'name'=>__('Street','edc'),
 					'field'=>'option',
 				),
-				'change_house'=>array(
-					'name'=>__('House','edc'),
-					'field'=>'option',
-				),
+                'change_house'=>array(
+                    'name'=>__('House','edc'),
+                    'field'=>'option',
+                ),
+                'change_house_zuratc'=>array(
+                    'name'=>__('Hausnummerzusatz','edc'),
+                    'field'=>'option',
+                ),
 				'change_postal_code'=>array(
 					'name'=>__('Postal code','edc'),
 					'field'=>'option',
