@@ -259,4 +259,40 @@ updateEdsPostcodes();
 
 add_filter('widget_text', 'do_shortcode');
 
+add_filter('edc_settings_information_layers_map', 'edc_settings_information_layers_map_custom');
+function edc_settings_information_layers_map_custom() {
+    return [
+        'house_zuratc'=>array(
+            'name'=>__('Hausnummerzusatz','edc'),
+        ),
+        'phone'=>array(
+            'name'=>__('Telefonnummer','edc'),
+        ),
+        'type_of_change'=>array(
+            'name'=>__('Art des Wechsels','edc'),
+        ),
+        'electric'=>array(
+            'name'=>__('Zählernummer','edc'),
+        ),
+        'electriс_value'=>array(
+            'name'=>__('Zählerstand','edc'),
+        ),
+    ];
+}
+
+add_filter('edc_settings',  'edc_settings_add_infoLayers');
+function edc_settings_add_infoLayers ($settings=[]) {
+    $settings['edc_info_layers']=[
+        'title'=>__('Information layers','edc-theme'),
+        'order'=>4
+    ];
+    $map = edc_settings_information_layers_map_custom();
+    foreach ($map as $key => $layer) {
+        $settings['edc_info_layers']['items'][0]["edc_info_" . $key] = $layer;
+        $settings['edc_info_layers']['items'][0]["edc_info_" . $key]["type"] = 'rich';
+    }
+
+    return $settings;
+}
+
 ?>

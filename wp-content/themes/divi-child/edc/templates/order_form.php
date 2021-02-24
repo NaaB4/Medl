@@ -1,3 +1,6 @@
+<?php
+$informationLayers = EDC_Extension::inst()->getInformationLayers();
+?>
 <div class="edc theme_<?=EDCH::proceedType($data['tariff']->type,true)?>">
     <section class="order_wrapper">
 		<div class="container">
@@ -64,7 +67,7 @@
 							</div>
 						</div>
 						<div class="col_1_4">
-							<div class="name"><?=__('Hausnummerzusatz','medl')?>:</div>
+							<div class="name"><?=__('Hausnummerzusatz','medl')?>: <?php if($informationLayers["house_zuratc"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["house_zuratc"]?></div></i><?php endif; ?></div>
 							<div class="field">
 								<input type="text" name="edc_house_zuratc" value="" maxlength="3">
 							</div>
@@ -315,7 +318,7 @@
 							</div>
 						</div>
 					</fieldset>				
-					<div class="form_title"><?=__('Art des Wechsels','medl')?> <span class="red">*</span></div>
+					<div class="form_title"><?=__('Art des Wechsels','medl')?> <span class="red">*</span> <?php if($informationLayers["type_of_change"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["type_of_change"]?></div></i><?php endif; ?></div>
 					<div class="fieldset tleft inline near">					
 						<div>
 							<div class="field type2 edc_radio">
@@ -508,14 +511,14 @@
 						<div class="fieldset" id="counter_fields_holder">
 							<?php if(EDCH::proceedType($data['tariff']->type,true)!='combi') : ?>
 								<div class="col_1_2">
-									<div class="name"><?=__('Counter number','edc')?> <span class="red">*</span>: <?php if($hint1) : ?><i class="edc_hint"><div class="text"><?=$hint1?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Counter number','edc')?> <span class="red">*</span>: <?php if($informationLayers["electric"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electric"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс" value="" data-required="1">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>
 									</div>
 								</div>
 								<div class="col_1_2">
-									<div class="name"><?=__('Meter reading','edc')?>: <?php if($hint2) : ?><i class="edc_hint"><div class="text"><?=$hint2?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Meter reading','edc')?>: <?php if($informationLayers["electriс_value"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electriс_value"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс_value" value="" class="only_numeric">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>
@@ -523,28 +526,28 @@
 								</div>
 							<?php else : ?>
 								<div class="col_1_2">
-									<div class="name"><?=__('Zählernummer Gas','medl')?> <span class="red">*</span>: <?php if($hint2) : ?><i class="edc_hint"><div class="text"><?=$hint2?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Zählernummer Gas','medl')?> <span class="red">*</span>: <?php if($informationLayers["electriс"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electriс"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс" value="" data-required="1">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>
 									</div>
 								</div>
 								<div class="col_1_2">
-									<div class="name"><?=__('Zählernummer Strom','medl')?> <span class="red">*</span>: <?php if($hint2) : ?><i class="edc_hint"><div class="text"><?=$hint2?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Zählernummer Strom','medl')?> <span class="red">*</span>: <?php if($informationLayers["electriс"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electriс"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс2" value="" data-required="1">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>
 									</div>
 								</div>	
 								<div class="col_1_2">
-									<div class="name"><?=__('Zählerstand Gas','medl')?>: <?php if($hint1) : ?><i class="edc_hint"><div class="text"><?=$hint1?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Zählerstand Gas','medl')?>: <?php if($informationLayers["electriс_value"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electriс_value"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс_value" value=""  class="only_numeric">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>
 									</div>
 								</div>
 								<div class="col_1_2">
-									<div class="name"><?=__('Zählerstand Strom','medl')?>: <?php if($hint1) : ?><i class="edc_hint"><div class="text"><?=$hint1?></div></i><?php endif; ?></div>
+									<div class="name"><?=__('Zählerstand Strom','medl')?>: <?php if($informationLayers["electriс_value"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["electriс_value"]?></div></i><?php endif; ?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс_value2" value=""  class="only_numeric">
 										<div class="required_text"><?=__('Enter counter number','edc')?></div>

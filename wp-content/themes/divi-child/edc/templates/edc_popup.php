@@ -4,6 +4,8 @@
 	list($el_ps,$el_sel)=EDC_Extension::inst()->getPersons('electricity');
 	list($gas_ps,$gas_sel)=EDC_Extension::inst()->getPersons('gas');
 	list($c_ps,$c_sel)=EDC_Extension::inst()->getPersons('combi');
+
+$informationLayers = EDC_Extension::inst()->getInformationLayers();
 ?>
 <div class="edc">
 	<div class="edc_popup" id="edc_popup">
@@ -26,7 +28,7 @@
 						</div>
 					</div>
 					<div class="form_row">
-						<div class="label">Telefonnummer <span class="red">*</span></div>
+						<div class="label">Telefonnummer <span class="red">*</span> <?php if($informationLayers["phone"]) : ?><i class="edc_hint"><div class="text"><?=$informationLayers["phone"]?></div></i><?php endif; ?></div>
 						<div class="field to_top">
 							<input type="text" class="only_numeric" name="phone" data-required="1">
 							<div class="required_text">Dieses Feld ist Pflichtfeld</div>
@@ -68,7 +70,7 @@
 					</div>
 					<div id="edc_popup_square">
 						<div class="form_row">
-							<div class="label">Art des Wechsels <span class="red">*</span></div>
+							<div class="label">Art des Wechsels <span class="red">*</span> <?php if($informationLayers["type_of_change"]) : ?><i class="edc_hint"><div class="text"><?= $informationLayers["type_of_change"] ?></div></i><?php endif; ?></div>
 							<div class="field to_top">
 								<select name="type_of_change">
                                     <option value="Neueinzug">Neueinzug</option>

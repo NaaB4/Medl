@@ -352,5 +352,15 @@ class EDC_Extension extends EDC{
 		}
 		return [$result,$selected];
 	}
+
+	public function getInformationLayers() {
+        $map = apply_filters('edc_settings_information_layers_map', []);
+        $layers = [];
+        foreach($map as $key => $layer) {
+            $layers[$key] = EDCH::opts('get','edc_info_'.$key,'settings');
+        }
+        return $layers;
+    }
+
 }
 ?>
