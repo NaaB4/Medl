@@ -236,6 +236,8 @@ EDC.prototype.submit=function(el,params){
 	if($(el).hasClass('loading')) return false;
 	let f=params['form'] ? params['form'] : $(el).parents('form').get(0);
 	if(!f || !f.length) return false;
+	let res=f.querySelector('.edc_ajax_result');
+	if($(res).hasClass('special')) return false;
 	edc.formLoading(f);
 	let valid=true;
 	valid=this.validateForm(f);
