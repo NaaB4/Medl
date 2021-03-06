@@ -240,8 +240,10 @@ class EDC_ORDERS extends EDCH{
 				'Zählerstand (Strom):'=>'edc_electriс_value2',
 				'Vertragskündigung durch medl:'=>'sollen_yes',
 				'Ab wann soll geliefert werden:'=>'edc_electriс_date',
-				'Vorversorger:'=>'edc_previous',
-				'Kundennummer Vorversorger:'=>'edc_contract',
+                'Vorversorger:'=>'edc_previous',
+                'Vorversorger (Strom):'=>'edc_previous2',
+                'Kundennummer Vorversorger:'=>'edc_contract',
+                'Kundennummer Vorversorger (Strom):'=>'edc_contract2',
 				'Datum der Zähleranmeldung:'=>'edc_read_date',
 			],
 			'Rechnungsadresse'=>[
@@ -579,10 +581,14 @@ class EDC_ORDERS extends EDCH{
 					'name'=>__('Current supplier','edc'),
 					'field'=>'option',
 				),
-				'edc_contract'=>array(
-					'name'=>__('Customer or contract account number','edc'),
-					'field'=>'option',
-				),
+                'edc_contract'=>array(
+                    'name'=>__('Customer or contract account number','edc'),
+                    'field'=>'option',
+                ),
+                'edc_contract2'=>array(
+                    'name'=>__('Customer or contract account number','edc'),
+                    'field'=>'option',
+                ),
 				'edc_electriс_value'=>array(
 					'name'=>__('Meter reading','edc'),
 					'field'=>'option',
@@ -592,10 +598,14 @@ class EDC_ORDERS extends EDCH{
 					'field'=>'option',
 					//'required'=>true,
 				),
-				'edc_previous'=>array(
-					'name'=>__('Previous year consumption (kWh)','edc'),
-					'field'=>'option',
-				),
+                'edc_previous'=>array(
+                    'name'=>__('Previous year consumption (kWh)','edc'),
+                    'field'=>'option',
+                ),
+                'edc_previous2'=>array(
+                    'name'=>__('Previous year consumption (kWh)','edc'),
+                    'field'=>'option',
+                ),
 				'edc_electriс_value2'=>array(
 					'name'=>__('Meter reading','edc'),
 					'field'=>'option',
@@ -660,8 +670,8 @@ class EDC_ORDERS extends EDCH{
 			'Zaehlerstand Gas'=>($edc->steps_data['first']['type']=='gas' ? 'edc_electriс_value' : ($edc->steps_data['first']['type']=='combi' ? 'edc_electriс_value' : '')),
 			'Bereits Gekuendigt'=>'edc_bereits',
 			'Lieferbeginn'=>'edc_read_date',
-			'Vorversorger Strom'=>($edc->steps_data['first']['type']=='electricity' && $data['change']!='new' ? 'edc_previous' : ''),
-			'Vorversorger Gas'=>($edc->steps_data['first']['type']=='gas' && $data['change']!='new' ? 'edc_previous' : ''),
+			'Vorversorger Strom'=>(($edc->steps_data['first']['type']=='electricity' || $edc->steps_data['first']['type']=='combi') && $data['change']!='new' ? 'edc_previous' : ''),
+			'Vorversorger Gas'=>($edc->steps_data['first']['type']=='gas' && $data['change']!='new' ? 'edc_previous' : ($edc->steps_data['first']['type']=='combi' && $data['change']!='new' ? 'edc_previous2' : '')),
 			'Kundennummer VV Strom'=>'',
 			'Kundennummer VV Gas'=>'',
 			'Rechnung Anrede'=>'edc_etc_gender',

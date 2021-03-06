@@ -26,8 +26,10 @@
 				'Zählerstand:'=>'edc_electriс_value',
 				'Vertragskündigung durch medl:'=>'sollen_yes',
 				'Ab wann soll geliefert werden:'=>'edc_electriс_date',
-				'Vorversorger:'=>'edc_previous',
-				'Kundennummer Vorversorger:'=>'edc_contract',
+                'Vorversorger:'=>'edc_previous',
+                'Vorversorger (Strom):'=>'edc_previous2',
+                'Kundennummer Vorversorger:'=>'edc_contract',
+				'Kundennummer Vorversorger (Strom):'=>'edc_contract2',
 				'Datum der Zähleranmeldung:'=>'edc_read_date',
 			],
 			'Rechnungsadresse'=>[

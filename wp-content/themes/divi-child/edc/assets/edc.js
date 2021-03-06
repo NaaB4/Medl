@@ -328,6 +328,8 @@
 			for(let i=0;i<els.length;++i) els[i].style.display='none';
 			for(let i=0;i<els2.length;++i) els2[i].style.display='block';
 			f.edc_previous.dataset.required='';
+			if(f.edc_previous2)
+				f.edc_previous2.dataset.required='';
 			f.edc_read_date.dataset.required='1';
 			//f.edc_contract.dataset.required='';
 			for(let i=0;i<f.cancel_old.length;++i) f.cancel_old[i].dataset.required='';
@@ -351,6 +353,8 @@
 			for(let i=0;i<els.length;++i) els[i].style.display='block';
 			for(let i=0;i<els2.length;++i) els2[i].style.display='none';
 			f.edc_previous.dataset.required='1';
+			if(f.edc_previous2)
+				f.edc_previous2.dataset.required='1';
 			f.edc_read_date.dataset.required='';
 			//f.edc_contract.dataset.required='1';
 			for(let i=0;i<f.cancel_old.length;++i) f.cancel_old[i].dataset.required='1';	

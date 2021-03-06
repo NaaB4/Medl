@@ -377,18 +377,86 @@ $informationLayers = EDC_Extension::inst()->getInformationLayers();
 							</div>
 						</fieldset>
 						<div class="change_fields">
-							<div class="fieldset">						
-								<div>
-									<div class="name"><?=__('Vorversorger','medl')?> <span class="red">*</span>:</div>
-									<div class="field">
-										<select name="edc_previous" value="" data-required="1">
-											<option value=""><?=__('Choose','edc')?></option>
-											<?=$data['suppliers_options']?>
-										</select>
-										<div class="required_text"><?=__('This field required','edc')?></div>
-									</div>
-								</div>
-							</div>
+                            <?php if (EDCH::proceedType($data['tariff']->type, true) === 'combi') : ?>
+                                <div class="fieldset">
+                                    <div>
+                                        <div class="name"><?= __('Vorversorger (Gas)', 'medl') ?> <span
+                                                    class="red">*</span>:
+                                        </div>
+                                        <div class="field">
+                                            <select name="edc_previous" value="" data-required="1">
+                                                <option value=""><?= __('Choose', 'edc') ?></option>
+                                                <?= $data['suppliers_options'] ?>
+                                            </select>
+                                            <div class="required_text"><?= __('This field required', 'edc') ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="change_fields">
+                                    <div class="fieldset">
+                                        <div>
+                                            <div class="name"><?=__('Kundennummer Vorversorger (Gas)','medl')?>:</div>
+                                            <div class="field">
+                                                <input type="text" name="edc_contract" value="">
+                                                <div class="required_text"><?=__('This field required','edc')?></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fieldset">
+                                    <div>
+                                        <div class="name"><?= __('Vorversorger (Strom)', 'medl') ?> <span
+                                                    class="red">*</span>:
+                                        </div>
+                                        <div class="field">
+                                            <select name="edc_previous2" value="" data-required="1">
+                                                <option value=""><?= __('Choose', 'edc') ?></option>
+                                                <?= $data['suppliers_options'] ?>
+                                            </select>
+                                            <div class="required_text"><?= __('This field required', 'edc') ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="change_fields">
+                                    <div class="fieldset">
+                                        <div>
+                                            <div class="name"><?=__('Kundennummer Vorversorger (Strom)','medl')?>:</div>
+                                            <div class="field">
+                                                <input type="text" name="edc_contract2" value="">
+                                                <div class="required_text"><?=__('This field required','edc')?></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="fieldset">
+                                    <div>
+                                        <div class="name"><?=__('Vorversorger','medl')?> <span class="red">*</span>:</div>
+                                        <div class="field">
+                                            <select name="edc_previous" value="" data-required="1">
+                                                <option value=""><?=__('Choose','edc')?></option>
+                                                <?=$data['suppliers_options']?>
+                                            </select>
+                                            <div class="required_text"><?=__('This field required','edc')?></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="change_fields">
+                                    <div class="fieldset">
+                                        <div>
+                                            <div class="name"><?=__('Kundennummer Vorversorger','medl')?>:</div>
+                                            <div class="field">
+                                                <input type="text" name="edc_contract" value="">
+                                                <div class="required_text"><?=__('This field required','edc')?></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
 							<div class="holder">
 								<div class="form_title"><?=__('Sollen wir deinen alten Vertrag kündigen?','medl')?> <span class="red">*</span>:</div>
 								<div class="fieldset tleft inline near">					
@@ -476,17 +544,6 @@ $informationLayers = EDC_Extension::inst()->getInformationLayers();
 									<div class="name"><?=__('Gewünschter Lieferbeginn','medl')?></div>
 									<div class="field">
 										<input type="text" name="edc_electriс_date" value="" class="datepicker_no_past">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="change_fields">
-							<div class="fieldset">
-								<div>
-									<div class="name"><?=__('Kundennummer Vorversorger','medl')?>:</div>
-									<div class="field">
-										<input type="text" name="edc_contract" value="">
-										<div class="required_text"><?=__('This field required','edc')?></div>
 									</div>
 								</div>
 							</div>
